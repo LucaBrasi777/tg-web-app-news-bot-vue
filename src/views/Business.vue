@@ -144,7 +144,7 @@
     box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
        margin: 5px;
     width: 290px;
-    height: 180px;
+    height: 160px;
    /* margin-right: 20px;
    margin-left: 20px; */
     

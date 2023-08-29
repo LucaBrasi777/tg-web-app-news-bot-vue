@@ -60,11 +60,11 @@
    .block{
    height: 30px;
    width:100%;
-    /* margin:0 auto;  */
+  margin-top: px;
    background:white;
    position: fixed;
    z-index: 1;
-  border: 2px solid black;
+  // border: 2px solid black;
   }
   
    

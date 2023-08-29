@@ -1,24 +1,15 @@
 <template lang="">
     <br/><br/>
-    <!-- <div>
-        <div class="news" v-for="item1 in news" :key="item1">
-      <img class="img" :src="item1.urlToImage"><br />
-      <p class="p-4">
-        <a class="link" :href="item1.url" target="_blank ">{{ item1.title }}</a>
-      </p>
+    
+    <input type="search" v-model="searchT" placeholder="search"
+    
+   
+    >
+   
 
-    </div>
-    </div> -->
-    <input type="search" v-model="searchT" placeholder="search">
-    <!-- <button @click="searchSelect">search</button> -->
-<!-- {{searchT}} -->
-<p>{{searchSelect}}</p>
-    <!-- <ul>
-        <li v-for="item in news"
-        :key="item">
-         <p>{{item.title}}</p> 
-        </li>
-    </ul> -->
+
+    <a href="">{{searchSelect}}</a>
+   
 </template>
 <script>
 import axios from 'axios';

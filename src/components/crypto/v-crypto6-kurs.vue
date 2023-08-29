@@ -15,6 +15,11 @@
             <a href="#" class="footer-social-link-three w-inline-block"><img
                 src="https://uploads-ssl.webflow.com/62434fa732124a0fb112aab4/62434fa732124a717f12aaea_youtube%20small.svg"
                 loading="lazy" alt=""></a>
+                <a href="#" class="footer-social-link-three w-inline-block"><img
+                src="https://uploads-ssl.webflow.com/62434fa732124a0fb112aab4/62434fa732124a705912aaeb_facebook%20big%20filled.svg"
+                loading="lazy" alt=""></a>
+            
+           
           </div>
 
 
@@ -62,6 +67,7 @@ export default {
 </script>
     
 <style lang="scss" scoped>
+
 .footer-social-link-three{
   margin: 7px;
 }
@@ -81,7 +87,7 @@ export default {
   // padding-left: auto;
   // justify-content: flex-start;
   // align-items: center;
-  
+  margin-right: 20px;
   display: flex;
   height: 30px;
   margin-top: 30px;

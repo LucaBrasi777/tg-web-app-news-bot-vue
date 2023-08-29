@@ -1,7 +1,7 @@
 <template lang="">
+
     <div class="wrap">
-      <!-- <h2>Technology news</h2><hr/> -->
-      <img class="tech-logo" src="../assets/ScienceCollegeLogo.svg.png"><hr/>
+        <img class="tech-logo" src="../assets/ScienceCollegeLogo.svg.png"><hr/>
     <section class="col-4-grid">
         <div class="col-4-grid__block">
         <div class="col-4-grid__block-grid"
@@ -131,4 +131,9 @@ width: 270px;
   
   
   
-  
+   
+
+
+
+
+   

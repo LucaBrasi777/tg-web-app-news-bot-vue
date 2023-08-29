@@ -53,7 +53,7 @@ h2{
 }
 .crypto-logo{
   width: 200px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .p-4 {
   width: 270px;
