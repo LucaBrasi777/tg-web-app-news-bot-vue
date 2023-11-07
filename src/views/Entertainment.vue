@@ -1,188 +1,168 @@
 <template lang="">
-    <div class="wrap">
-      
-      <!-- <h2>Entertainment</h2><hr/> -->
-      <img class="entertainment-logo" src="../assets/E!_News_current_logo.png"><hr/>
-    <!-- <section class="col-4-grid">
-        <div class="col-4-grid__block">
-        <div class="col-4-grid__block-grid"
-       
-        >
-          <div class="col-grid-4__block-grid-content"
-          v-for="item in info2"
-        :key="item">
-            <img class="col-grid-4__block-grid-content-image img" :src='item.urlToImage' :alt='alt'>
-            <p class="col-grid-4__block-grid-content-paragraph">
-              <a class="col-grid-4__block-grid-content-paragraph-link" :href="item.url" target="_blank "> {{ item.title }} </a>
-            </p>
-          </div>
-         
+  <br/>
+
+
+
+
+<br/>
+<div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row mt-10">
+                      <bs11/>
+                      <bs5/>
+                   <bs10/>
+                  
+                   
+                    <bs6/>
+                 
+                  </div>
+                    </div>
+             <div class="col-lg-4">
+                    
+                    <bs7/>
+                
+                  </div>
+            </div>
         </div>
-      </div>
-    
-  </section>  -->
-
-  <section class="col-4-grid">
-        <div class="col-4-grid__block">
-        <div class="col-4-grid__block-grid"
-       
-        >
-          <div class="col-grid-4__block-grid-content"
-          v-for="item in info2"
-        :key="item">
-            <img class="col-grid-4__block-grid-content-image img" :src='item.urlToImage' :alt=' alt'>
-            <p class="col-grid-4__block-grid-content-paragraph">
-              <a class="col-grid-4__block-grid-content-paragraph-link" :href="item.url" target="_blank ">
-                 {{ item.title }} </a>
-            </p>
-          </div>
-         
-        </div>
-      </div>
-    
-  </section> 
-
-
-
     </div>
-  </template>
-  <script>
-  import axios from 'axios'
-  // eb237649c2594555a26f68e392086d40 API entertainment
-  export default{
-    data(){
-      return{
-        info2:null,
-        
-      }
-    },
-
-
-    mounted(){
-      axios
-       .get('https://newsapi.org/v2/top-headlines?category=entertainment&language=en&apiKey=2e9a3f2dafb44777a86c64914a83abf1&pageSize=100')
-        // .get(' https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?TenantId=1&Language=52&Country=41&CategoryId=3&Page=1&PageSize=10')
-       .then(response=>{
-           this.info2 = response.data.articles
-      })
-      .catch(error=>{
-        console.log(error)
-      })
-  }
-
-
-  //   mounted(){
-  //     axios
-  //      .get('https://newsapi.org/v2/top-headlines?category=entertainment&language=en&apiKey=2e9a3f2dafb44777a86c64914a83abf1&pageSize=100')
-  //     // .get(' https://newsapi.org/v2/everything?q=Apple&from=2023-08-19&sortBy=popularity&apiKey=eb237649c2594555a26f68e392086d40')
-  //      .then(response=>{
-  //          this.info2 = response.data.articles
-  //     })
-  //     .catch(error=>{
-  //       console.log(error)
-  //     })
-  // }
-}
+    <bs8/>
+<bs9/>
+<bs14/>
+    <div class="container">
+ 
+   
+  </div>
+    <bs16/>
+    <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sFv2tZfpUy4?si=55Qa5oodU8-42lUb" allowfullscreen></iframe>
+    </div>
+    <bs12/>
+    <bs15/>
+   
     
-  </script>
-  <style  lang="scss" scoped>
-
-
-
-
-
-
-
-
-
-
-  .entertainment-logo{
-    width: 100px;
-    margin-top: 50px;
-  }
-  h2{
-    margin-top: 50px;
-  }
-  .wrap{
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .col-4-grid{
-     margin-top: 50px;
-     }
-   .col-4-grid__block-grid{
-    display: grid;
-    grid-template-columns:repeat(4,1fr);
-    margin-top: 30px;
-    }
-  .img{
-    box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-       margin: 5px;
-    width: 290px;
-   /* margin-right: 20px;
-   margin-left: 20px; */
+  
+     
     
-  }
-  .col-grid-4__block-grid-content-paragraph{
-    /* margin-right: 20px;
-   margin-left: 20px; */
-   font-size: 14px;
-width: 270px;
-margin: 8px;
-   /* padding-left: 10px;
-    padding-right: 10px; */
-  }
-  .col-grid-4__block-grid-content-paragraph-link{
-    text-decoration: none;
-    color: black;
-    width: 200px;
-    font-weight: bold;
-    }
-    .col-grid-4__block-grid-content-paragraph-link:hover{
-    text-decoration: underline;
-  }
+  
+    </template>
+    <script>
+    
+    import bs5 from '../components/Entertainment/bs5.vue'
+    import bs6 from '../components/Entertainment/bs6.vue'
+    import bs7 from '../components/Entertainment/bs7.vue'
+    import bs8 from '../components/Entertainment/bs8.vue'
+    import bs10 from '../components/Entertainment/bs10.vue'
+    import bs11 from '../components/Entertainment/bs11.vue'
+    import bs16 from '../components/Entertainment/bs16.vue'
+    import bs9 from '../components/Entertainment/bs9.vue'
+    import bs14 from '../components//Entertainment/bs14.vue'
+    import bs12 from '../components/Entertainment/bs12.vue'
+    import bs15 from '../components/Entertainment/bs15.vue'
 
-
-  // @media
-  .col-4-grid__block-grid{
-    @media screen and(max-width: 900px)
-    {display: grid;
-    grid-template-columns:repeat(3,1fr);
-    margin-top: 30px;}
-    @media screen and(max-width: 600px)
-    {display: grid;
-    grid-template-columns:repeat(2,1fr);
-    margin-top: 30px;}
-    @media screen and(max-width: 400px)
-    {display: grid;
-    grid-template-columns:repeat(1,1fr);
-    margin-top: 30px;}
+    export default {
+      components:{
+    bs5,bs6,
+    bs8,
+    bs7,
+    bs10,
+    bs11,
+    bs9,
+    bs14,
+    bs12,
+    bs16,
+   
+    bs15,
+   
+      },
+      data() {
+        return {
+          articles: [],       
+          currentPage: 1,    
+          totalPages: 1,     
+          rows: 12,          
+        };
+      },
+      computed: {
+        paginatedArticles() {
+         
+          const start = (this.currentPage - 1) * this.rows;
+          const end = start + this.rows;
+          return this.articles.slice(start, end);
+        },
+      },
+      methods: {
+        async getData() {
+          // Fetch articles from the News API
+          const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
+          const pageSize = 100;
+          
+          try {
+            const response = await fetch(
+              `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
+            );
+            const data = await response.json();
+            return data.articles;
+          } catch (error) {
+            console.error('Error fetching news:', error);
+            return [];
+          }
+        },
+        async fetchNews() {
+         
+          const articles = await this.getData();
+          this.articles = articles;
+          this.totalPages = Math.ceil(articles.length / this.rows);
+        },
+        nextPage() {
+         
+          if (this.currentPage < this.totalPages) {
+            this.currentPage++;
+          }
+        },
+        prevPage() {
+         
+          if (this.currentPage > 1) {
+            this.currentPage--;
+          }
+        },
+      },
+      mounted() {
+       
+        this.fetchNews();
+      },
+    };
+    </script>
+    <style lang="scss" scoped>
+    .page-numbers{
+      margin-top: 20px;
     }
-  .img{
-    @media screen and(max-width:900px){
-      width: 300px;
+    a{
+      text-decoration: none;
+      color: black;
     }
-    @media screen and(max-width:600px){
-      width: 300px;
-    }
-    @media screen and(max-width:400px){
-      width: 360px;
-    }
-  }
-  .col-grid-4__block-grid-content-paragraph{
-@media screen and (max-width:900px){
-  width: 300px;
-  font-size: 16px;
-  
-}
-@media screen and (max-width:400px){
-  width: 350px;
-  font-size: 16px;
-  
-}
-  }
-  </style> 
-  
-  
-  
-  
+      a:hover{
+        text-decoration: underline;
+      } 
+      .next-bt,.prev-bt{
+              margin: 13px;
+              background-color:white;
+              color: rgb(248, 2, 2);
+              box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+              border-radius: 2px;
+              padding: 7px;
+              font-weight: bold;
+              
+            }
+            .next-bt:hover,.prev-bt:hover{
+              background-image: linear-gradient(to right,#040d1d, #053684);
+              color: white;
+              
+              
+          
+            } 
+            .card{
+              box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+            }
+    </style>

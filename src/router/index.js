@@ -1,108 +1,91 @@
 // Composables
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
-import Crypto from "@/views/Crypto.vue";
-import Sport from "@/views/Sport.vue";
-import Exchange from "@/views/Exchange.vue";
-import Defi from "@/views/Defi.vue";
-import News from "@/views/News.vue";
-import Top from "@/views/TopCrypto.vue";
-import Nft from "@/views/Nft.vue";
+ import Crypto from "@/views/Crypto.vue";
+ import Sport from "@/views/Sport.vue";
 import Business from "@/views/Business.vue";
-import Ico from "@/views/Ico.vue";
-import Ai from "@/views/Ai.vue";
 import Tech from "@/views/Tech.vue";
 import Entertainment from "@/views/Entertainment.vue";
-import Stocks from "@/views/Stocks.vue";
-import Sceince from '@/views/Sceince.vue';
+import Science from '@/views/Science.vue';
 import Health from '@/views/Health.vue'
-import Select from '@/views/Select.vue'
+import About from '@/views/About.vue'
+import Top from '@/views/Top.vue'
+import Stocks from '@/views/Stocks.vue'
+import General from '@/views/General.vue'
 const routes = [
   {
     path: "/",
     component: Home,
     name: "Home",
+    meta: { title: "HOME" },
+    children: [
+      {
+        path: 'General',
+        component: General,
+        meta: { title: "GENERAL" },
+      },
+      {
+        path: 'Business',
+        component: Business,
+        meta: { title: "BUSINESS" },
+        children:[
+          
+        ]
+      },
+      {
+        name:"Crypto",
+        path: 'Crypto',
+        component: Crypto,
+        meta: { title: "CRYPTO" },
+      },
+      {
+        path: 'Sport',
+        component: Sport,
+        meta: { title: "SPORT" },
+      },
+      {
+        path: 'Tech',
+        component: Tech,
+        meta: { title: "TECHNOLOGY" },
+      },
+      {
+        path: 'Health',
+        component: Health,
+        meta: { title: "HEALTH" },
+      },
+      {
+        path: 'Science',
+        component: Science,
+        meta: { title: "SCINCE" },
+      },
+      {
+        path: 'Entertainment',
+        component: Entertainment,
+        meta: { title: "ENTERTAINMENT" },
+      },
+      {
+        path: "/About",
+        component: About,
+        name: "About",
+        meta: { title: "ABOUT" },
+      },
+    ],
   },
-  {
-    path: "/Crypto",
-    component: Crypto,
-    name: "Crypto",
-  },
-  {
-    path: "/Sport",
-    component: Sport,
-    name: "Sport",
-  },
-
-  {
-    path: "/Exchange",
-    component: Exchange,
-    name: "Exchange",
-  },
-  {
-    path: "/News",
-    component: News,
-    name: News,
-  },
-  {
-    path: "/Defi",
-    component: Defi,
-    name: "Defi",
-  },
+  // {
+  //   path: "/Crypto",
+  //   component: Crypto,
+  //   name: "Crypto",
+  // },
+  
   {
     path: "/Top",
     component: Top,
     name: "Top",
   },
   {
-    path: "/Nft",
-    component: Nft,
-    name: "Nft",
-  },
-  {
-    path: "/Business",
-    component: Business,
-    name: "Business",
-  },
-  {
-    path: "/Ico",
-    component: Ico,
-    name: "Ico",
-  },
-  {
-    path: "/Ai",
-    component: Ai,
-    name: "Ai",
-  },
-  {
-    path: "/Tech",
-    component: Tech,
-    name: "Tech",
-  },
-  {
     path: "/Stocks",
     component: Stocks,
     name: "Stocks",
-  },
-  {
-    path: "/Entertainment",
-    component: Entertainment,
-    name: "Entertainment",
-  },
-  {
-    path: "/Sceince",
-    component: Sceince,
-    name: "Sceince",
-  },
-  {
-    path: "/Health",
-    component: Health,
-    name: "Health",
-  },
-  {
-    path: "/Select",
-    component: Select,
-    name: "Select",
   },
 ];
 

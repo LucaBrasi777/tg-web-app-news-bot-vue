@@ -1,202 +1,100 @@
 <template lang="">
-    <div class="wrap">
-
-      <!-- <div class="div-block-9">
-      <div  data-video-urls="videos/1071119503-preview-transcode.mp4,videos/1071119503-preview-transcode.webm" 
-      data-autoplay="true" 
-      data-loop="true" 
-      data-wf-ignore="true" 
-      class="w-background-video w-background-video-atom video">
-      <video id="44976736-4e8d-ad55-d8d3-ab40e8a976da-video" 
-       class="video"
-      autoplay="" 
-      loop="" 
-      style="width:100%" 
-      muted="" 
-      playsinline="" 
-      data-wf-ignore="true" 
-      data-object-fit="cover">
-          <source src="../videos/istockphoto-1097906834-640_adpp_is.mp4" data-wf-ignore="true">
-          <source src="../videos/istockphoto-1097906834-640_adpp_is.mp4" data-wf-ignore="true">
-        </video></div>
-
-    </div> -->
+  <br/>
+  <!-- <div  class="mt-3 embed-responsive embed-responsive-16by9">
+  <video controls="false" class="embed-responsive-item" src="https://dsqqu7oxq6o1v.cloudfront.net/preview-1240469-RzHxnmo7My-high.mp4" allowfullscreen></video>
+</div> -->
 
 
-<img class="sport-logo" src="../assets/sport-news-logo.png"><hr/>
-    <!-- <h2>Sport</h2><hr/> -->
-    <section class="col-4-grid">
-        <div class="col-4-grid__block">
-        <div class="col-4-grid__block-grid"
-       
-        >
-          <div class="col-grid-4__block-grid-content"
-          v-for="item in info2"
-        :key="item">
-            <img class="col-grid-4__block-grid-content-image img" :src='item.urlToImage' :alt='alt'>
-            <p class="col-grid-4__block-grid-content-paragraph">
-              <a class="col-grid-4__block-grid-content-paragraph-link" :href="item.url" target="_blank "> {{ item.title }} </a>
-            </p>
-          </div>
-         
+
+<br/>
+<div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                  
+                      <bs11/>
+                 
+                   <bs5/>
+                   <bs10/>
+                    <bs6/>
+                 
+                  </div>
+                    </div>
+             <div class="col-lg-4">
+                    
+                    <bs7/>
+                
+                  </div>
+            </div>
         </div>
-      </div>
-    
-  </section> 
-
-
-
-    <!-- <section class="col-4-grid">
-      <div class="col-4-grid__block">
-      <div class="col-4-grid__block-grid"
-     
-      >
-        <div class="col-grid-4__block-grid-content"
-        v-for="item in info2"
-      :key="item">
-          <img class="col-grid-4__block-grid-content-image img" :src='item.urlToImage' :alt=' alt'>
-          <p class="col-grid-4__block-grid-content-paragraph">
-            <a class="col-grid-4__block-grid-content-paragraph-link" :href="item.url" target="_blank "> {{ item.title }} </a>
-          </p>
-        </div>
-       
-      </div>
     </div>
-  
-</section>  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
- </div>
-</template>
-
-
-
-<script>
-import axios from 'axios'
-// 2e9a3f2dafb44777a86c64914a83abf1 API sport
-export default{
-  data(){
-    return{
-      info2:null
-    }
-  },
-  mounted(){
-      axios
-       .get('https://newsapi.org/v2/top-headlines?category=sports&language=en&apiKey=1fb27fc9978d48ecadb4bdc77705325e&pageSize=100')
-      // .get(' https://newsapi.org/v2/everything?q=Apple&from=2023-08-19&sortBy=popularity&apiKey=eb237649c2594555a26f68e392086d40')
-       .then(response=>{
-           this.info2 = response.data.articles
-      })
-      .catch(error=>{
-        console.log(error)
-      })
-  }}
-  
-</script>
-<style lang="scss" scoped>
-.sport-logo{
-  width: 300px;
-}
-li{
-  margin-left: 20px;
-}
-    .wrap{
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-top: 50px;
-        font-weight: bold;
-    }
-    .img{
-        width: 100%;
-    }
+    <bs8/>
+<bs9/>
+<bs14/>
+    <div class="container">
+    
+  </div>
+    
+    <bs16/>
+    <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6LcCsuq76N0?si=S1imCjeO7anDGrRl" allowfullscreen></iframe>
+    </div>
+    <bs12/>
+    <bs15/>
    
-   img{
-    width: 500px;
-   } 
-   .defi-logo{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-   }
-   .col-4-grid{
-   margin-top: 50px;
-   }
- .col-4-grid__block-grid{
-  display: grid;
-  grid-template-columns:repeat(4,1fr);
-  margin-top: 30px;
-  }
-.img{
-  box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-     margin: 5px;
-  width: 290px;
+    
+  
+     
+    
+  
+    </template>
+    <script>
+    
+    import bs5 from '../components/Sport/bs5.vue'
+    import bs6 from '../components/Sport/bs6.vue'
+    import bs7 from '../components/Sport/bs7.vue'
+    import bs8 from '../components/Sport/bs8.vue'
+    import bs10 from '../components/Sport/bs10.vue'
+    import bs11 from '../components/Sport/bs11.vue'
+    import bs16 from '../components/Sport/bs16.vue'
+    import bs9 from '../components/Sport/bs9.vue'
+    import bs14 from '../components//Sport/bs14.vue'
+    import bs12 from '../components/Sport/bs12.vue'
+    import bs15 from '../components/Sport/bs15.vue'
 
-}
-.col-grid-4__block-grid-content-paragraph{
- margin: 10px;
- font-size: 14px;
- width: 270px;
- 
-}
-.col-grid-4__block-grid-content-paragraph-link{
-  text-decoration: none;
-  color: black;
-  width: 200px;
-  font-weight: bold;
-  }
-  .col-grid-4__block-grid-content-paragraph-link:hover{
-  text-decoration: underline;
-}
-// @media
-.col-4-grid__block-grid{
-    @media screen and(max-width: 900px)
-    {display: grid;
-    grid-template-columns:repeat(3,1fr);
-    margin-top: 30px;}
-    @media screen and(max-width: 600px)
-    {display: grid;
-    grid-template-columns:repeat(2,1fr);
-    margin-top: 30px;}
-    @media screen and(max-width: 400px)
-    {display: grid;
-    grid-template-columns:repeat(1,1fr);
-    margin-top: 30px;}
-    }
-  .img{
-    @media screen and(max-width:900px){
-      width: 300px;
-    }
-    @media screen and(max-width:600px){
-      width: 300px;
-    }
-    @media screen and(max-width:400px){
-      width: 360px;
-    }
-  }
-  .col-grid-4__block-grid-content-paragraph{
-@media screen and (max-width:900px){
-  width: 300px;
-  font-size: 16px;
-  
-}
-@media screen and (max-width:400px){
-  width: 350px;
-  font-size: 16px;
-  
-}
-  }
-</style>
+    export default {
+      components:{
+    bs5,
+    bs6,
+    bs8,
+    bs7,
+    bs10,
+    bs11,
+    bs9,
+    bs14,
+    bs12,
+    bs16,
+   
+    bs15,
+   
+      },
+      data() {
+        return {
+          articles: [],       
+          currentPage: 1,    
+          totalPages: 1,     
+          rows: 12,          
+        };
+      },
+      computed: {
+        paginatedArticles() {
+         
+          const start = (this.currentPage - 1) * this.rows;
+          const end = start + this.rows;
+          return this.articles.slice(start, end);
+        },
+      },
+      methods: {
+      }}
+      </script>

@@ -1,257 +1,136 @@
 <template lang="">
-    <br/>
-    <div class="wrap">
-      
-      
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-<div class="grid">
-  <img class="stocks-logo" src="../assets/top-2.png">
-
-
-        <select class="select"  v-model="selected">
-    <option value="" disabled>Select Company</option>
-    <option v-for="value in stock" 
-    :key="value.stock" 
-    :value="value.content"
-    
-    >
-    <a :href="value.url">{{ value.title }}</a>
-    
   
-  </option>
+  <div class="container text-center ">
+ 
+<select   style="color:white" placeholder="search" class="select text-white" v-model="selectedCompany">
+ 
+  <option class="text-white" style="color:white" v-for="value in stock" :key="value.stock" :value="value">{{ value.companyName }}</option>
+</select>
+</div>
+<div  v-if="selectedCompany">
+ 
+  <!-- <button @click="closeInfo" class="text-white button p-2 rounded-2 mt-1">close </button>
+   -->
 
 
-  <!-- <img :src="value.urlToImage"> -->
-    <!-- <a>{{ selected }} </a> -->
-  </select>
+  <p class="card-text card-body text-black">
+                <h5 class="card-title "><strong> {{ selectedCompany.companyName }}</strong></h5>
+                <u class="">  <span>{{ selectedCompany.symbol }}</span></u><br/>
+                <u class="">  <span class="">Price:{{ selectedCompany.price}} $</span></u><br/>
+                  <u><span>Mcap:{{selectedCompany.mktCap}}</span></u><br/>
+                  <u class=""> <span>Exchange:{{selectedCompany.exchange}}</span></u><br/>
+                <u class="">  <span>Industry:{{selectedCompany.industry}}</span></u><br/>
+                <u class="">   <span>Ceo:{{selectedCompany.ceo}}</span></u><br/>
+                <u class=""> <span>Country:{{selectedCompany.country}}</span></u><br/>
+                 
+                <u class="">  <span>Phone:{{selectedCompany.phone}}</span></u><br/>
+                <u class="">  <span>Address:{{selectedCompany.address}}</span></u><br/>
+                <u class="">   <span>City:{{selectedCompany.city}}</span></u><br/>
+                <u class="">  <span>State:{{selectedCompany.state}}</span></u><br/>
+               <p> <u class="">  <span><strong>{{selectedCompany.description}}</strong></span></u></p><br/>
+                
+
+                <button class="text-white " @click="openWebsite(selectedCompany.website)"><strong  class="text-white">{{selectedCompany.website}}</strong></button>
+
+                 
+                 
+              </p> 
+
+              <button @click="closeInfo" class="text-white button p-1 rounded-2 mt-1">close </button>
   
+
 </div>
 
 
-  <div class="info">
-   <a >{{ selected }} </a>
-  </div>
-   
-          <div class="stock">
-    <div class="stock-item" v-for="value in stock" :key="value.stock">
-      <div class="stock-item__info">
-        <div class="stock-item__cover">
-          <img :src="value.image" :alt="value.companyName">
-        </div>
-        <h3 class="stock-item__title">
-          {{ value.companyName }}
-          <span>{{ value.symbol }}</span>
-          <span class="stock-item__price">Price:{{ value.price}} $</span>
-
-<span>Mcap:{{value.mktCap}}</span>
-          <span>Exchange:{{value.exchange}}</span>
-          <span>Industry:{{value.industry}}</span>
-          <span>Ceo:{{value.ceo}}</span>
-          <span>Country:{{value.country}}</span>
-          <span>Phone:{{value.phone}}</span>
-          <span>Address:{{value.address}}</span>
-          <span>City:{{value.city}}</span>
-          <span>State:{{value.state}}</span>
-          <span><a :href="value.website" target="_blank"><strong>{{value.website}}</strong></a></span>
-
-        </h3>
-      </div>
-     </div>
-    </div>
-</div>
 <br/><br/>
+    
+    
+   
+  <!-- </div>
+
+
+   
+
+
+  </div> -->
+
+
+
+
+
+
+
 </template>
 <script lang="">
- import axios from 'axios'
+import axios from 'axios'
 
- export default {
-   name: 'Stocks',
-   data() {
-     return {
-      href:null,
-       stock: [],
-       errors: [],
-       selected: '',
-       info2:[]
-     }
-   },
-
-  //  mounted(){
-  //     axios
-  //      .get('https://newsapi.org/v2/top-headlines?category=business&language=en&apiKey=eb237649c2594555a26f68e392086d40&pageSize=6')
-  //     // .get(' https://newsapi.org/v2/everything?q=Apple&from=2023-08-19&sortBy=popularity&apiKey=eb237649c2594555a26f68e392086d40')
-  //      .then(response=>{
-  //          this.info2 = response.data.articles
-  //     })
-  //     .catch(error=>{
-  //       console.log(error)
-  //     })
-  // },
-
-
-   created() {
-     axios
-     .get('https://newsapi.org/v2/top-headlines?category=business&language=en&apiKey=eb237649c2594555a26f68e392086d40&pageSize=100')
-    //  .get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=2e9a3f2dafb44777a86c64914a83abf1&pageSize=100')
-    // //  .get('https://financialmodelingprep.com/api/v3/profile/AAPL,NVDA,TSLA,AMD,INTC,MDB,SPCE,V,DAL,DOCU,OKTA,AMZN,PINS,TRIP,GDDY,DIS,MCD,NOK,UPWK,IBM,FB,ZM,OZON,NFLX,EA,HLT,H,CCL?apikey=6c9be8fcb7df7894ba5ae48be14935fc')
-     .then(responce => {
-       this.stock = responce.data.articles
-       console.log(responce)
-     })
-     .catch(e => {
-       this.errors.push(e)
-     })
+export default {
+ name: 'Stocks',
+ data() {
+   return {
+    // isInfoOpen: false,
+    img:'https://mir-s3-cdn-cf.behance.net/projects/404/80440e173273301.Y3JvcCwyNDk5LDE5NTUsMCww.jpg',
+     stock: [],
+     errors: [],
+     selectedCompany: null
    }
+ },
+
+methods:{
+  closeInfo() {
+  this.selectedCompany = null; 
+},
+
+  openWebsite(url) {
+  window.open(url, '_blank');
+}
+},
+
+
+ created() {
+   axios.get('https://financialmodelingprep.com/api/v3/profile/AAPL,NVDA,TSLA,AMD,INTC,MDB,SPCE,V,DAL,DOCU,OKTA,AMZN,PINS,TRIP,GDDY,DIS,MCD,NOK,UPWK,IBM,FB,ZM,OZON,NFLX,EA,HLT,H,CCL,META?apikey=6c9be8fcb7df7894ba5ae48be14935fc')
+   .then(response => {
+     this.stock = response.data
+     console.log(response)
+   })
+   .catch(e => {
+     this.errors.push(e)
+   })
  }
+}
 </script>
 <style lang="scss" scoped>
-
-.text{
-  position: absolute;
-  color: white;
-  font-size: 1em;
-  background-color: black;
-  margin-top: 250px;
-
+.text-dark{
+font-size:9px;
+color:white;
 }
 
-
-img{
-  width: 500px;
-
-}
-
-p{
-  width: 500px;
-  
-}
-
-.grid-1{
-  display: grid;
-  grid-template-columns: 600px 600px;
-}
-
-
-
-
-
-
-
-
-
-
-
-.grid{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  margin-top: 30px;
-}
-.stocks-logo{
-  width: 400px;
-}
 
 .select{
-    padding: 8px;
-    box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-    font-weight: bold;
-    margin-top: 50px;
-    height: 50px;
-    margin: 10px;
-   outline: none;
-    font-size: 20px;
-    border-radius: 7px;
-    width: 600px;
+  margin-top: 10px;
+  width: 180px;
+  list-style: none;
+  border:2px solid rgb(248, 244, 244);
+  padding:3px;
+  border-radius: 5px;
 }
-.select:hover{
- background-color: rgb(3, 3, 3);
-   color: white;
-}
-.wrap{
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.stock {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-.stock-item {
-    box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-     
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-}
-.stock-item__info {
-    display: flex;
-    align-items: center;
-}
-.stock-item__cover {
-    flex: 0 0 30px;
-    margin-right: 15px;
-}
-.stock-item__cover img {
-    width: 100%;
-}
-.stock-item__title {
-    font-size: 15px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.stock-item__title span {
-    display: block;
-    font-weight: 400;
-    font-size: 14px;
-    color: #777;
-    margin-top: 3px;
-}
-.stock-item__price {
-    flex: 0 0 80px;
-    /* text-align: right; */
-}
-.info {
-    margin-top: 20px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    
-}
-h2{
-    text-align: center;
-}
-h3{
-   margin-top: 40px; 
-}
-
-
-
-
-
+.select{
+    //  border: none !important;
+      box-shadow: none !important;
+      list-style: none;
+    }
+u,option{
+  text-decoration: none;
   
+}
+
+u,h5,p{
+  color:white;
+}
+.button{
+  border:2px solid red;
+}
+.button:hover{
+  background-color: red;
+}
 </style>
