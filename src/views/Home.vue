@@ -48,7 +48,7 @@
       articles(){
         return [
           {
-            img:'https://cdn5.vectorstock.com/i/1000x1000/77/54/business-news-vector-1227754.jpg',
+            img:'https://upload.wikimedia.org/wikipedia/uk/5/58/Business_logo.jpg',
             route:'Business'
             
           },

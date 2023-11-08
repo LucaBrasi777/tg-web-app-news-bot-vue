@@ -1,4 +1,5 @@
 <template lang="">
+  <!-- https://resources.cryptocompare.com/news/43/19905721.jpeg -->
   <br/>
   <!-- <div class="embed-responsive embed-responsive-16by9">
   <video controls="false" class="embed-responsive-item" src="https://dsqqu7oxq6o1v.cloudfront.net/motion-array-1231945-UpvkPabkjU-high.mp4" allowfullscreen></video>
