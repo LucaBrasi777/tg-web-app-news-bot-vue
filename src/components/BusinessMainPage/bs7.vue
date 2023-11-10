@@ -10,7 +10,7 @@
                         <div class="bg-white text-center   p-3"> 
                           
                               <img class="img-fluid " v-if = "item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-                                    <img class="img-fluid " v-else src=" #" style="object-fit: cover;">
+                                    <img class="img-fluid " v-else :src="image " style="object-fit: cover;">
                                    
                         </div>
                     </div>
@@ -19,6 +19,7 @@
 export default {
     data() {
        return {
+        image:"https://cloudinary.hbs.edu/hbsit/image/upload/s--EmT0lNtW--/f_auto,c_fill,h_375,w_750,/v20200101/6978C1C20B650473DD135E5352D37D55.jpg",
          articles: [],       // Array to store articles
          currentPage: 1,    // Current page number
          totalPages: 1,     // Total number of pages

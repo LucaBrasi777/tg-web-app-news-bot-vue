@@ -108,7 +108,7 @@ v-for="item in news2"
       </span>
     
     </div>
-
+   
 </template>
 <script>
 // 1fb27fc9978d48ecadb4bdc77705325e API tech
@@ -187,10 +187,7 @@ export default {
   
 }
 
-// .home:hover{
-//    color: black;
 
-// }
 a{
   color: black;
   text-decoration: none;

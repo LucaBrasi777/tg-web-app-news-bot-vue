@@ -10,7 +10,7 @@
                           <div class="row news-lg mx-0 mb-3">
                               <div class="col-md-6 h-100 px-0">
                                   <img class="img-fluid h-100" v-if = "item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-                                  <img class="img-fluid h-100" v-else src="#" style="object-fit: cover;">
+                                  <img class="img-fluid h-100" v-else src="https://elastic-path.transforms.svdcdn.com/production/images/Blog-Hero-Meta-Images/GettyImages-1446624021.jpg?w=1200&h=630&q=82&auto=format&fit=crop&dm=1692147610&s=75003dff012ab1a33cdab485492d0ea1" style="object-fit: cover;">
                                  
                               </div>
                               <div class="col-md-6 d-flex flex-column bg-white h-100 px-0">

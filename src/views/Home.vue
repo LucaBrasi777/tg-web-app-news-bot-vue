@@ -17,7 +17,7 @@
                    >
                        <div  class="position-relative overflow-hidden" style="height: 250px;">
                         <router-link :to="item.route">   
-                 <img class="img-fluid w-100 h-100"  :src="item.img" style="object-fit: cover;">
+                 <img  class="img-fluid w-100 h-100"  :src="item.img" style="object-fit: cover;">
             
                         </router-link>
                           
@@ -104,33 +104,7 @@
          
         
  
-    //      async getData2() {
-           
-          
-    //        const pageSize = 8;
-     
-    //        try {
-    //          const response = await fetch(
-    //            `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=3&Language=14&Page=1&PageSize=${pageSize}`
-    //          );
-    //          const data = await response.json();
-    //          return data.items;
-    //        } catch (error) {
-    //          console.error("Error fetching news:", error);
-    //          return [];
-    //        }
-    //      },
-    //      async fetchNews2() {
-    //        const articles = await this.getData2();
-    //        this.articles2 = articles;
-    //        this.totalPages = Math.ceil(articles.length / this.rows2);
-    //      },
-    //  },
-    //  mounted() {
-    //    // Fetch news data when the component is mounted
-    //    // this.fetchNews();
-    //    this.fetchNews2();
-    //  },
+    
  }}
  </script>
  <style lang="scss" scoped>
