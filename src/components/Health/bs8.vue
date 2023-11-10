@@ -16,7 +16,7 @@
             >
 
               <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage">
-              <img class="img-fluid w-100 h-100" v-else src="https://www.business-to-you.com/wp-content/uploads/2016/09/global-business.jpg">
+              <img class="img-fluid w-100 h-100" v-else :src="image">
            
               <div class="overlay">
                                 <div class="mb-2">
@@ -42,7 +42,7 @@
                     
                         <div class="position-relative overflow-hidden" style="height: 250px;">
                             <img class="img-fluid w-100 h-100"  v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-                            <img class="img-fluid w-100 h-100"  v-else src="https://healthnews-stat.com/wp-content/uploads/2023/03/97925489.jpg">
+                            <img class="img-fluid w-100 h-100"  v-else :src="image2">
                             <div class="overlay">
                                 <div class="mb-2">
                                     <!-- <a class="badge text-uppercase font-weight-semi-bold p-2 mr-2 text-white"
@@ -74,16 +74,18 @@
   export default {
     data() {
         return {
+          image:"https://uploads-ssl.webflow.com/6115126cb98f9d365214d444/62740bab4cb3b876dfafb0dc_e8e80fe7-0a4a-40f2-9163-b773c86e52e4.jpeg",
+          image2:"https://online.hbs.edu/Style%20Library/api/resize.aspx?imgpath=/online/PublishingImages/blog/health-care-economics.jpg&w=1200&h=630",
           articles: [],
-          articles2: [], // Array to store articles
-          currentPage: 1,    // Current page number
-          totalPages: 1,     // Total number of pages
-          rows: 4,          // Number of articles per page
+          articles2: [], 
+          currentPage: 1,    
+          totalPages: 1,    
+          rows: 4,
         };
       },
       computed: {
         paginatedArticles() {
-          // Calculate the range of articles to display on the current page
+         
           const start = (this.currentPage - 1) * this.rows;
           const end = start + this.rows;
           return this.articles.slice(start, end);

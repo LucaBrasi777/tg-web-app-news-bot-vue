@@ -47,15 +47,15 @@ export default {
   data() {
       return {
         articles: [],
-        articles2: [], // Array to store articles
-        currentPage: 1,    // Current page number
-        totalPages: 1,     // Total number of pages
-        rows: 4,          // Number of articles per page
+        articles2: [], 
+        currentPage: 1,   
+        totalPages: 1,     
+        rows: 4,         
       };
     },
     computed: {
       paginatedArticles() {
-        // Calculate the range of articles to display on the current page
+       
         const start = (this.currentPage - 1) * this.rows;
         const end = start + this.rows;
         return this.articles.slice(start, end);
@@ -78,7 +78,7 @@ export default {
         async getData() {
           
          const pageSize = 77
-          // const pageSize = 26;
+          
     
           try {
             const response = await fetch(
@@ -120,7 +120,7 @@ export default {
         },
     },
     mounted() {
-      // Fetch news data when the component is mounted
+     
       this.fetchNews();
       this.fetchNews2();
     },

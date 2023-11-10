@@ -10,7 +10,7 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   build: {
     rollupOptions: {
-      external: ['/wp-content/uploads/2023/03/97925489.jpg','/https://cloudinary.hbs.edu/hbsit/image/upload/s--EmT0lNtW--/f_auto,c_fill,h_375,w_750,/v20200101/6978C1C20B650473DD135E5352D37D55.jpg'],
+      external: ['/wp-content/uploads/2023/03/97925489.jpg'],
     },
   },
   plugins: [

@@ -12,7 +12,8 @@
                     
                     >
                         <div class="position-relative overflow-hidden" style="height: 250px;">
-                            <img class="img-fluid w-100 h-100" :src="item.urlToImage" style="object-fit: cover;">
+                            <img class="img-fluid w-100 h-100" v-if="item.urlToimage" :src="item.urlToImage" style="object-fit: cover;">
+                            <img class="img-fluid w-100 h-100" v-else :src="image2"  style="object-fit: cover;">
                             <div class="overlay">
                                 <div class="mb-2">
                                     
@@ -34,7 +35,7 @@
             >
   
             <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage">
-              <img class="img-fluid w-100 h-100" v-else src="https://www.ripplesnigeria.com/wp-content/uploads/2020/03/Latest-tech-news.jpg">
+              <img class="img-fluid w-100 h-100" v-else :src="image2">
            
            
               <div class="overlay">
@@ -72,6 +73,8 @@
   export default {
     data() {
         return {
+          image:'https://www.analyticsinsight.net/wp-content/uploads/2021/07/Technology-Can-Boost-Your-Business-Productivity.jpg',
+          image2:'https://www.analyticsinsight.net/wp-content/uploads/2021/07/Technology-Can-Boost-Your-Business-Productivity.jpg',
           articles: [],
           articles2: [], // Array to store articles
           currentPage: 1,    // Current page number

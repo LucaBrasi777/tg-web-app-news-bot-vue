@@ -11,7 +11,7 @@
                         <div class="position-relative overflow-hidden" style="height: 250px;">
                           <!-- crossorigin="anonymous" -->
                           <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-              <img class="img-fluid w-100 h-100" v-else src="" style="object-fit: cover;">
+              <img class="img-fluid w-100 h-100" v-else :src="image" style="object-fit: cover;">
            
                           
                          
@@ -38,6 +38,7 @@
   export default {
     data() {
         return {
+          image:'https://acxngcvroo.cloudimg.io/v7/https://www.scienceinschool.org/wp-content/uploads/2021/09/card_teach.jpg',
           articles: [],
           articles2: [],
           currentPage: 1,
@@ -113,7 +114,7 @@
           },
       },
       mounted() {
-        // Fetch news data when the component is mounted
+       
         this.fetchNews();
         this.fetchNews2();
       },

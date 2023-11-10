@@ -5,7 +5,9 @@
 </div> -->
 
 
-
+<bs8/>
+<bs9/>
+<bs14/>
 <br/>
 <div class="container-fluid">
         <div class="container">
@@ -29,17 +31,16 @@
             </div>
         </div>
     </div>
-    <bs8/>
-<bs9/>
-<bs14/>
+
     <div class="container">
     
   </div>
     
-    <bs16/>
+   
     <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6LcCsuq76N0?si=S1imCjeO7anDGrRl" allowfullscreen></iframe>
     </div>
+    <bs16/>
     <bs12/>
     <bs15/>
    

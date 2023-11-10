@@ -1,31 +1,21 @@
 <template lang="">
     <div class="container-fluid p-0">
+      <!-- <input 
+                    v-model="searchT" 
+                    placeholder="Search news" 
+                    v-on:input="onSearchType"  
+                    class="form-control input bg-black"  
+                    aria-label="Search"
+                    type="text"> -->
         <nav class="navbar navbar-expand-lg bg-black navbar-dark py-2 py-lg-0 px-lg-5">
-          <bread/>
+         
+         
+         
           
-          <a href="" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-4 h1 text-uppercase text-primary"> <img class=" m-0 display-4" style="width:100px" src="https://play-lh.googleusercontent.com/p2McSemKnQBO2wXgsjj8GNWjLHyDSdgSkK1YLx07Hzn9xIycsaUD_v9wmftK22FryQ=w600-h300-pc0xffffff-pd"></h1>
-                <!-- <img class="msj m-0 display-4" style="width:150px" src="https://www.innovatorslink.com/wp-content/uploads/2020/09/msj-logo-2-full-white-420x187.png"> -->
-               
-              </a>
-
-            <button type="button" style="" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span style="" class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav mr-auto py-0 mt-5">
-                    <router-link  @click="openHome" to="/" href="#" class="   home" style="color:white">Home</router-link>
-                     <router-link  @click="closedHome" to="/Business" href="#" style="color:white" class="">Business</router-link>
-                     <router-link  @click="closedHome" to="/Tech" href="#" style="color:white" class="">Technology</router-link>
-                     <router-link  @click="closedHome" to="/Sport" href="#" style="color:white" class="">Sport</router-link>
-                     <router-link  @click="closedHome" to="/Health" href="#" style="color:white" class="">Health</router-link>
-                     <router-link  @click="closedHome" to="/Science" href="#" style="color:white" class="">Science</router-link>
-                     <router-link  @click="closedHome" to="/Entertainment" href="#" style="color:white" class="">Entertainment</router-link>
-                     <!-- <router-link  @click="closedHome" to="/Business" href="#" style="color:white" class="">Crypto</router-link>
-                    -->
-                    
-                    <div class="nav-item dropdown mt-3">
-                        <a href="#" class=" dropdown-toggle home" data-toggle="dropdown" style="color:white">More</a>
+         
+          <bread/>
+          <div class="nav-item dropdown mt-3">
+                        <a href="#" class=" dropdown-toggle home" data-toggle="dropdown" style="color:white;font-size:12px">Location</a>
                         <ul class="dropdown-menu rounded-0  bg-black" style="">
                           <!-- <li @click="closedHome"> <router-link  to="/General" href="#" class="">General</router-link></li>
                           
@@ -39,6 +29,30 @@
                         </ul>
                         
                     </div>
+          <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-4 h1 text-uppercase text-primary"> <img class=" m-0 display-4" style="width:100px" src="https://play-lh.googleusercontent.com/p2McSemKnQBO2wXgsjj8GNWjLHyDSdgSkK1YLx07Hzn9xIycsaUD_v9wmftK22FryQ=w600-h300-pc0xffffff-pd"></h1>
+                <!-- <img class="msj m-0 display-4" style="width:150px" src="https://www.innovatorslink.com/wp-content/uploads/2020/09/msj-logo-2-full-white-420x187.png"> -->
+               
+              </a>
+
+            <button type="button" style="" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span style="" class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0 mt-5">
+                    <router-link  @click="openHome" to="/" href="#" class="   home" style="color:white">Home</router-link>
+                    <router-link  @click="closedHome" to="/General" href="#" class="   home" style="color:white">Main</router-link>
+                     <router-link  @click="closedHome" to="/Business" href="#" style="color:white" class="">Business</router-link>
+                     <router-link  @click="closedHome" to="/Tech" href="#" style="color:white" class="">Technology</router-link>
+                     <router-link  @click="closedHome" to="/Sport" href="#" style="color:white" class="">Sport</router-link>
+                     <router-link  @click="closedHome" to="/Health" href="#" style="color:white" class="">Health</router-link>
+                     <router-link  @click="closedHome" to="/Science" href="#" style="color:white" class="">Science</router-link>
+                     <router-link  @click="closedHome" to="/Entertainment" href="#" style="color:white" class="">Entertainment</router-link>
+                    <router-link  @click="closedHome" to="/Crypto" href="#" style="color:white" class="">Crypto</router-link>
+                     <!-- <router-link  @click="closedHome" to="/Business" href="#" style="color:white" class="">Crypto</router-link>
+                    -->
+                    
+                    
                     <!-- <a href="single.html" class="nav-item" style="color:white">Blog</a> -->
                     <!-- <a href="contact.html" class="nav-item nav-link">Contact</a>
                     <a href="category.html" class="nav-item nav-link">Video</a>
@@ -48,13 +62,7 @@
                 -->
 
                
-                    <input 
-                    v-model="searchT" 
-                    placeholder="Search news" 
-                    v-on:input="onSearchType"  
-                    class="form-control mt-1 input bg-black"  
-                    aria-label="Search"
-                    type="text">
+                    
                
                
                 </div>
@@ -106,7 +114,13 @@ v-for="item in news2"
         
        <span style="font-size:18px;color:white">{{item.title}}{{item.content}}</span> </p>
       </span>
-    
+      <input 
+                    v-model="searchT" 
+                    placeholder="Search news" 
+                    v-on:input="onSearchType"  
+                    class="form-control input bg-black"  
+                    aria-label="Search"
+                    type="text">
     </div>
    
 </template>
@@ -222,24 +236,27 @@ a{
   }
 }
 
-
+.input{
+  // width: 170px;
+  
+}
 .close{
   position: fixed;
-  left:228px;
-  top:65px;
+  left:258px;
+  top:105px;
  }
 .div {
   // box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
   position: fixed;
   border: 2px solid white;
   display: none;
-  width: 250px;
+  width: 270px;
   margin-left: px;
   margin-right: 30px;
 
   border-radius: 5px;
 
-  top: 67px;
+  top: 110px;
   padding: 20px;
 
   height: 515px;

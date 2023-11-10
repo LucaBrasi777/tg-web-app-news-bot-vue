@@ -16,7 +16,7 @@
                         <div class="position-relative overflow-hidden" style="height: 250px;">
                                 
                           <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-              <img class="img-fluid w-100 h-100" v-else src="https://umaine.edu/news/wp-content/uploads/sites/3/2019/09/One-Health-news-feature.jpg" style="object-fit: cover;">
+              <img class="img-fluid w-100 h-100" v-else :src="image">
            
                             <div class="overlay">
                                 <div class="mb-2">
@@ -40,16 +40,17 @@
   export default {
     data() {
         return {
+          image:'https://www.spar.co.za/getattachment/c4954b27-36cb-49fb-995f-0d4e50053dc9/Health.aspx',
           articles: [],
-          articles2: [], // Array to store articles
-          currentPage: 1,    // Current page number
-          totalPages: 1,     // Total number of pages
-          rows: 4,          // Number of articles per page
+          articles2: [], 
+          currentPage: 1,   
+          totalPages: 1,    
+          rows: 4,          
         };
       },
       computed: {
         paginatedArticles() {
-          // Calculate the range of articles to display on the current page
+          
           const start = (this.currentPage - 1) * this.rows;
           const end = start + this.rows;
           return this.articles.slice(start, end);
@@ -94,8 +95,7 @@
           },
       },
       mounted() {
-        // Fetch news data when the component is mounted
-        // this.fetchNews();
+       
         this.fetchNews2();
       },
   }

@@ -12,7 +12,7 @@
       <div class="card">
        
         <img v-if="item.urlToImage" :src="item.urlToImage" class="card-img-top" >
-        <img v-else  src="" class="card-img-top" alt="...">
+        <img v-else  :src="image" class="card-img-top" alt="...">
         <div class="card-body">
           <a class="card-title text-black fw-bold" :href="item.url" target="_blank">{{item.title}}</a>
          
@@ -36,6 +36,7 @@
   export default {
       data() {
           return {
+            image:'https://root-nation.com/wp-content/uploads/2021/05/Online-Entertainment-01.jpg',
             articles: [],
             articles2: [],
             currentPage: 1,   

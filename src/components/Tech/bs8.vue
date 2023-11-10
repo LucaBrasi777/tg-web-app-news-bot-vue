@@ -16,7 +16,7 @@
           >
 
             <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage">
-             <img class="img-fluid w-100 h-100" v-else src="https://www.ripplesnigeria.com/wp-content/uploads/2020/03/Latest-tech-news.jpg">
+             <img class="img-fluid w-100 h-100" v-else :src="image">
         
             <div class="overlay">
                               <div class="mb-2">
@@ -42,6 +42,8 @@
                   
                       <div class="position-relative overflow-hidden" style="height: 250px;">
                           <img class="img-fluid w-100 h-100" :src="item.urlToImage" style="object-fit: cover;">
+                        
+                        
                           <div class="overlay">
                               <div class="mb-2">
                                   
@@ -71,6 +73,7 @@
 export default {
   data() {
       return {
+        image:'https://www.yondu.com/wp-content/uploads/2022/08/OPT-2-medium-shot-man-wearing-vr-glasses-scaled.jpg',
         articles: [],
         articles2: [], 
         currentPage: 1,    
@@ -145,7 +148,7 @@ export default {
         },
     },
     mounted() {
-      // Fetch news data when the component is mounted
+     
       this.fetchNews();
       this.fetchNews2();
     },

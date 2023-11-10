@@ -14,7 +14,7 @@
                         <div class="position-relative overflow-hidden" style="height: 250px;">
                             <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
                             
-                            <img class="img-fluid w-100 h-100" v-else src="https://connect.geant.org/wp-content/uploads/2021/12/Open-Science.jpg">
+                            <img class="img-fluid w-100 h-100" v-else :src="image">
            
 
                             <div class="overlay">
@@ -38,7 +38,7 @@
             >
   
             <img style="max-height:500px" class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage">
-              <img class="img-fluid w-100 h-100" v-else src="">
+              <img class="img-fluid w-100 h-100" v-else :src="image2">
            
            
               <div class="overlay">
@@ -76,6 +76,8 @@
   export default {
     data() {
         return {
+          image:'https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/istock-1344939844.jpg?itok=r8Kxykzj',
+          image2:'https://www.renaissance.com.au/wp-content/uploads/2021/04/Science.jpg',
           articles: [],
           articles2: [], // Array to store articles
           currentPage: 1,    // Current page number

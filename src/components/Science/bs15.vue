@@ -15,7 +15,7 @@
                  >
                      <div class="position-relative overflow-hidden" style="height: 250px;">
                       <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-              <img class="img-fluid w-100 h-100" v-else src="" style="object-fit: cover;">
+              <img class="img-fluid w-100 h-100" v-else :src="image" style="object-fit: cover;">
            
                          <div class="overlay">
                              <div class="mb-2">
@@ -37,6 +37,7 @@
 export default {
  data() {
      return {
+      image:'https://www.odmps.org/updates/wp-content/uploads/2022/01/3651141-scaled.jpg',
        articles: [],
        articles2: [], 
        currentPage: 1,   
@@ -66,27 +67,6 @@ export default {
        
        
        
-      //  async getData() {
-         
-        
-      //    const pageSize = 4;
-   
-      //    try {
-      //      const response = await fetch(
-      //        `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=9&Language=14&Page=1&PageSize=${pageSize}`
-      //      );
-      //      const data = await response.json();
-      //      return data.items;
-      //    } catch (error) {
-      //      console.error("Error fetching news:", error);
-      //      return [];
-      //    }
-      //  },
-      //  async fetchNews() {
-      //    const articles = await this.getData();
-      //    this.articles = articles;
-      //    this.totalPages = Math.ceil(articles.length / this.rows);
-      //  },
 
        async getData2() {
          

@@ -10,7 +10,7 @@
                         <div class="bg-white text-center   p-3"> 
                           
                               <img class="img-fluid " v-if = "item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-                                    <img class="img-fluid " v-else src=" " style="object-fit: cover;">
+                                    <img class="img-fluid " v-else :src="image " style="object-fit: cover;">
                                    
                         </div>
                     </div>
@@ -19,15 +19,16 @@
 export default {
     data() {
        return {
-         articles: [],       // Array to store articles
-         currentPage: 1,    // Current page number
-         totalPages: 1,     // Total number of pages
-         rows: 11,          // Number of articles per page
+        image:'https://images.theconversation.com/files/430261/original/file-20211104-25-1t7f05u.png?ixlib=rb-1.1.0&rect=35%2C17%2C2309%2C1288&q=45&auto=format&w=926&fit=clip',
+         articles: [],       
+         currentPage: 1,    
+         totalPages: 1,     
+         rows: 11,         
        };
      },
      computed: {
        paginatedArticles() {
-         // Calculate the range of articles to display on the current page
+        
          const start = (this.currentPage - 1) * this.rows;
          const end = start + this.rows;
          return this.articles.slice(start, end);
@@ -35,7 +36,7 @@ export default {
      },
      methods: {
        async getData() {
-         // Fetch articles from the News API
+        
         // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
          //const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
          const pageSize = 70;
@@ -52,26 +53,26 @@ export default {
          }
        },
        async fetchNews() {
-         // Fetch news and update component data
+         
          const articles = await this.getData();
          this.articles = articles;
          this.totalPages = Math.ceil(articles.length / this.rows);
        },
        nextPage() {
-         // Go to the next page
+        
          if (this.currentPage < this.totalPages) {
            this.currentPage++;
          }
        },
        prevPage() {
-         // Go to the previous page
+         
          if (this.currentPage > 1) {
            this.currentPage--;
          }
        },
      },
      mounted() {
-       // Fetch news data when the component is mounted
+       
        this.fetchNews();
      }, 
 }

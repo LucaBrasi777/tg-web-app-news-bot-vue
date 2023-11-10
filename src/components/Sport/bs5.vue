@@ -10,7 +10,7 @@
                           <div class="row news-lg mx-0 mb-3">
                               <div class="col-md-6 h-100 px-0">
                                   <img class="img-fluid h-100" v-if = "item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-                                  <img class="img-fluid h-100" v-else src="" style="object-fit: cover;">
+                                  <img class="img-fluid h-100" v-else :src="image" style="object-fit: cover;">
                                  
                               </div>
                               <div class="col-md-6 d-flex flex-column bg-white h-100 px-0">
@@ -21,17 +21,13 @@
                                           <span class="text-body" href=""><small>  {{ formatDateTime(item.publishedAt) }}</small></span>
                                       </div>
                                       <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"  :href="item.url" target="_blank">{{item.title}}</a>
-                                      <!-- <p class="m-0">{{item.content}}</p> -->
+                                      
                                   </div>
                                   <div class="d-flex justify-content-between bg-white  mt-auto p-4">
                                       <div class="d-flex align-items-center">
-                                          <!-- <img class="rounded-circle mr-2" src="/src/img/user.jpg" width="25" height="25" alt="">
-                                          <small>John Doe</small> -->
+                                         
                                       </div>
-                                      <!-- <div class="d-flex align-items-center">
-                                          <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
-                                          <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
-                                      </div> -->
+                                      
                                   </div>
                               </div>
                           </div>
@@ -46,16 +42,17 @@
 export default {
   data() {
       return {
+        image:'https://ucaststudios.com/wp-content/uploads/2020/07/Athletes-in-Different-Sports.jpg',
         articles: [],
-        articles2: [], // Array to store articles
-        currentPage: 1,    // Current page number
-        totalPages: 1,     // Total number of pages
-        rows: 4,          // Number of articles per page
+        articles2: [], 
+        currentPage: 1,    
+        totalPages: 1,    
+        rows: 4,         
       };
     },
     computed: {
       paginatedArticles() {
-        // Calculate the range of articles to display on the current page
+       
         const start = (this.currentPage - 1) * this.rows;
         const end = start + this.rows;
         return this.articles.slice(start, end);
@@ -97,32 +94,32 @@ export default {
           this.totalPages = Math.ceil(articles.length / this.rows);
         },
 
-        async getData2() {
+        // async getData2() {
           
          
-          const pageSize = 1;
+        //   const pageSize = 1;
     
-          try {
-            const response = await fetch(
-              `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=10&Language=14&Page=1&PageSize=${pageSize}`
-            );
-            const data = await response.json();
-            return data.items;
-          } catch (error) {
-            console.error("Error fetching news:", error);
-            return [];
-          }
-        },
-        async fetchNews2() {
-          const articles = await this.getData2();
-          this.articles2 = articles;
-          this.totalPages = Math.ceil(articles.length / this.rows2);
-        },
+        //   try {
+        //     const response = await fetch(
+        //       `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=10&Language=14&Page=1&PageSize=${pageSize}`
+        //     );
+        //     const data = await response.json();
+        //     return data.items;
+        //   } catch (error) {
+        //     console.error("Error fetching news:", error);
+        //     return [];
+        //   }
+        // },
+        // async fetchNews2() {
+        //   const articles = await this.getData2();
+        //   this.articles2 = articles;
+        //   this.totalPages = Math.ceil(articles.length / this.rows2);
+        // },
     },
     mounted() {
-      // Fetch news data when the component is mounted
+     
       this.fetchNews();
-      this.fetchNews2();
+      // this.fetchNews2();
     },
 }
 </script>

@@ -47,13 +47,17 @@
 
       articles(){
         return [
+        {
+            img:'https://automaticlogslitters.com/wp-content/uploads/2022/09/photodune-9262934-latest-news-blue-3d-realistic-paper-speech-bubble-s.jpg',
+            route:'/General'
+          },
           {
             img:'https://upload.wikimedia.org/wikipedia/uk/5/58/Business_logo.jpg',
             route:'Business'
             
           },
           {
-            img:'https://www.ripplesnigeria.com/wp-content/uploads/2020/03/Latest-tech-news.jpg',
+            img:'https://st2.depositphotos.com/1092019/5248/i/450/depositphotos_52486621-stock-photo-tech-news-on-blue-puzzle.jpg',
             route:'/Tech'
           },
           {
@@ -76,10 +80,7 @@
             img:'https://assets-global.website-files.com/5ddfe807a73baddd985c1e6f/604fa038d8d5c63d1c304640_BOTS_Crypto_News_Website-Header.jpg',
             route:'/Crypto'
           },
-          {
-            img:'https://media.baamboozle.com/uploads/images/17278/1668517376_47986.jpeg',
-            route:'/Crypto'
-          },
+          
          ]},
        paginatedArticles() {
          // Calculate the range of articles to display on the current page

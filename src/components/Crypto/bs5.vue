@@ -213,7 +213,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-filter: brightness(0.5); /* Adjust the brightness value to control the darkness */
+filter: brightness(0.5); 
 z-index: 1;
 }
 
@@ -223,7 +223,7 @@ z-index: 2;
 }
 
 .card .d-flex h2 {
-color: #fff; /* Set the color for the bright h2 title */
+color: #fff; 
 }
 h2{
 position: relative;

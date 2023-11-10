@@ -10,7 +10,7 @@
                           <div class="row news-lg mx-0 mb-3">
                               <div class="col-md-6 h-100 px-0">
                                   <img class="img-fluid h-100" v-if = "item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-                                  <img class="img-fluid h-100" v-else src="https://healthnews-stat.com/wp-content/uploads/2023/03/97925489.jpg" style="object-fit: cover;">
+                                  <img class="img-fluid h-100" v-else :src="image" style="object-fit: cover;">
                                  
                               </div>
                               <div class="col-md-6 d-flex flex-column bg-white h-100 px-0">
@@ -46,6 +46,7 @@
 export default {
   data() {
       return {
+        image:'https://www.spar.co.za/getattachment/c4954b27-36cb-49fb-995f-0d4e50053dc9/Health.aspx',
         articles: [],
         articles2: [], 
         currentPage: 1,   
@@ -120,7 +121,7 @@ export default {
         },
     },
     mounted() {
-      // Fetch news data when the component is mounted
+    
       this.fetchNews();
       this.fetchNews2();
     },

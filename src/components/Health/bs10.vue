@@ -43,9 +43,7 @@ export default {
     },
     methods: {
       async getData() {
-        // Fetch articles from the News API
-        //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
-        //const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
+      
         const pageSize = 12;
         
         try {
@@ -60,26 +58,26 @@ export default {
         }
       },
       async fetchNews() {
-        // Fetch news and update component data
+       
         const articles = await this.getData();
         this.articles = articles;
         this.totalPages = Math.ceil(articles.length / this.rows);
       },
       nextPage() {
-        // Go to the next page
+       
         if (this.currentPage < this.totalPages) {
           this.currentPage++;
         }
       },
       prevPage() {
-        // Go to the previous page
+       
         if (this.currentPage > 1) {
           this.currentPage--;
         }
       },
     },
     mounted() {
-      // Fetch news data when the component is mounted
+     
       this.fetchNews();
     }, 
 }

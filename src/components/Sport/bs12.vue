@@ -14,7 +14,7 @@
                         <div class="position-relative overflow-hidden" style="height: 250px;">
                            
                             <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-              <img class="img-fluid w-100 h-100" v-else src="" style="object-fit: cover;">
+              <img class="img-fluid w-100 h-100" v-else :src="image" style="object-fit: cover;">
            
                             <div class="overlay">
                                 <div class="mb-2">
@@ -37,7 +37,7 @@
             >
   
             <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage">
-              <img class="img-fluid w-100 h-100" v-else src="https://dovidka.biz.ua/wp-content/uploads/2015/12/tsikavi-fakty-pro-sport.jpg">
+              <img class="img-fluid w-100 h-100" v-else :src="image2">
            
            
               <div class="overlay">
@@ -75,6 +75,8 @@
   export default {
     data() {
         return {
+          image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBSkfLB4vlK_ZdSE-qGurLoFV6hkqBrHJtQ&usqp=CAU',
+          image2:'https://sport.ec.europa.eu/sites/default/files/styles/eac_ratio_16_9_large/public/2023-04/Web%20Banner%201380x776_EU%20Sport%20Forum%202023_V01-01_1.jpg?h=bd7da5e6&itok=3bN1LLLf',
           articles: [],
           articles2: [], // Array to store articles
           currentPage: 1,    // Current page number

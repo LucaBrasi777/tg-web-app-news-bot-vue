@@ -14,7 +14,7 @@
                         <div class="position-relative overflow-hidden" style="height: 250px;">
                            
                             <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-              <img class="img-fluid w-100 h-100" v-else src="">
+              <img class="img-fluid w-100 h-100" v-else :src="image">
            
                           
                           
@@ -41,7 +41,7 @@
             >
   
             <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage">
-              <img class="img-fluid w-100 h-100" v-else src="https://www.bsr.org/images/heroes/bsr-mediaentertainment-hero..jpg">
+              <img class="img-fluid w-100 h-100" v-else :src="image2">
            
            
               <div class="overlay">
@@ -79,16 +79,18 @@
   export default {
     data() {
         return {
+          image:'https://media.moddb.com/images/games/1/46/45829/City_01B.png',
+          image2:'https://www.popoptiq.com/wp-content/uploads/2019/01/1-26-1.jpg',
           articles: [],
-          articles2: [], // Array to store articles
-          currentPage: 1,    // Current page number
-          totalPages: 1,     // Total number of pages
-          rows: 4,          // Number of articles per page
+          articles2: [], 
+          currentPage: 1,   
+          totalPages: 1,    
+          rows: 4,
         };
       },
       computed: {
         paginatedArticles() {
-          // Calculate the range of articles to display on the current page
+          
           const start = (this.currentPage - 1) * this.rows;
           const end = start + this.rows;
           return this.articles.slice(start, end);
@@ -153,7 +155,7 @@
           },
       },
       mounted() {
-        // Fetch news data when the component is mounted
+       
         this.fetchNews();
         this.fetchNews2();
       },

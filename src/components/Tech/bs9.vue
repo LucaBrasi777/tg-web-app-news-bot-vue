@@ -11,7 +11,7 @@
               <div class="position-relative overflow-hidden" style="height: 250px;">
                  
                 <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-    <img class="img-fluid w-100 h-100" v-else src="https://www.ripplesnigeria.com/wp-content/uploads/2020/03/Latest-tech-news.jpg" style="object-fit: cover;">
+    <img class="img-fluid w-100 h-100" v-else :src="image">
  
                 
                
@@ -38,16 +38,17 @@
 export default {
 data() {
 return {
+image:'https://www.netscribes.com/wp-content/uploads/2019/06/Technology-Watch.jpg',
 articles: [],
-articles2: [], // Array to store articles
-currentPage: 1,    // Current page number
-totalPages: 1,     // Total number of pages
-rows: 10,          // Number of articles per page
+articles2: [], 
+currentPage: 1,   
+totalPages: 1,     
+rows: 10,          
 };
 },
 computed: {
 paginatedArticles() {
-// Calculate the range of articles to display on the current page
+
 const start = (this.currentPage - 1) * this.rows;
 const end = start + this.rows;
 return this.articles.slice(start, end);
@@ -112,7 +113,7 @@ async fetchNews2() {
 },
 },
 mounted() {
-// Fetch news data when the component is mounted
+
 this.fetchNews();
 this.fetchNews2();
 },

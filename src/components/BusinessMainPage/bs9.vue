@@ -11,7 +11,7 @@
                         <div class="position-relative overflow-hidden" style="height: 250px;">
                            
                           <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-              <img class="img-fluid w-100 h-100" v-else src="https://www.business-to-you.com/wp-content/uploads/2016/09/global-business.jpg" style="object-fit: cover;">
+              <img class="img-fluid w-100 h-100" v-else :src="image" style="object-fit: cover;">
            
                           
                          
@@ -38,16 +38,17 @@
   export default {
     data() {
         return {
+          image:'https://www.fluentu.com/blog/business-english/wp-content/uploads/sites/20/2023/06/business-meeting-1-1024x683.jpg',
           articles: [],
-          articles2: [], // Array to store articles
-          currentPage: 1,    // Current page number
-          totalPages: 1,     // Total number of pages
-          rows: 10,          // Number of articles per page
+          articles2: [], 
+          currentPage: 1,  
+          totalPages: 1,     
+          rows: 10,         
         };
       },
       computed: {
         paginatedArticles() {
-          // Calculate the range of articles to display on the current page
+         
           const start = (this.currentPage - 1) * this.rows;
           const end = start + this.rows;
           return this.articles.slice(start, end);

@@ -13,7 +13,7 @@
         <!-- <img class="img-fluid w-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
         <img class="img-fluid w-100" v-else src=" https://www.kingbruwaert.org/wp-content/uploads/2023/06/1.jpg" style="object-fit: cover;"> -->
         <img v-if="item.urlToImage" :src="item.urlToImage" class="card-img-top" >
-        <img v-else  src="" class="card-img-top" alt="...">
+        <img v-else  :src="image" class="card-img-top" alt="...">
         <div class="card-body">
           <a class="card-title text-black fw-bold" :href="item.url" target="_blank">{{item.title}}</a>
          
@@ -37,16 +37,17 @@
   export default {
       data() {
           return {
+            image:'https://www.visitmorocco.com/sites/default/files/thumbnails/image/maigrir-vite-sans-r%C3%A9gime-sans-sport-niaque-gain-vitesse-reussir-success.jpg',
             articles: [],
-            articles2: [], // Array to store articles
-            currentPage: 1,    // Current page number
-            totalPages: 1,     // Total number of pages
-            rows: 12,          // Number of articles per page
+            articles2: [],
+            currentPage: 1,   
+            totalPages: 1,     
+            rows: 12,         
           };
         },
         computed: {
           paginatedArticles() {
-            // Calculate the range of articles to display on the current page
+            
             const start = (this.currentPage - 1) * this.rows;
             const end = start + this.rows;
             return this.articles.slice(start, end);
@@ -69,7 +70,7 @@
             async getData() {
               
              
-              const pageSize = 16;
+              const pageSize = 76;
         
               try {
                 const response = await fetch(

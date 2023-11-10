@@ -1,32 +1,20 @@
 <template lang="">
-  <!-- <div class="mb-3"
-  v-for="(item, index) in articles.slice(40)" :key="index"
-
-  >
-                      <div class="section-title mb-0">
-                          <a class="m-0 text-uppercase font-weight-bold text-danger"  :href="item.url" target="_blank">{{item.title}}</a>
-                      </div>
-                      <div class="bg-white text-center   p-3">
-                        
-                            <img class="img-fluid " v-if = "item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-                                  <img class="img-fluid " v-else src=" https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg" style="object-fit: cover;">
-                                 
-                      </div>
-                  </div> -->
+  <div></div>
 </template>
 <script>
 export default {
   data() {
      return {
-       articles: [],       // Array to store articles
-       currentPage: 1,    // Current page number
-       totalPages: 1,     // Total number of pages
-       rows: 11,          // Number of articles per page
+      image:'https://media.nature.com/lw1024/magazine-assets/d41586-018-01021-5/d41586-018-01021-5_15387858.jpg',
+       articles: [],       
+       currentPage: 1,    
+       totalPages: 1,
+       rows: 11,          
      };
    },
    computed: {
      paginatedArticles() {
-       // Calculate the range of articles to display on the current page
+      
        const start = (this.currentPage - 1) * this.rows;
        const end = start + this.rows;
        return this.articles.slice(start, end);
@@ -34,9 +22,7 @@ export default {
    },
    methods: {
      async getData() {
-       // Fetch articles from the News API
-      // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
-       //const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
+       
        const pageSize = 50;
        
        try {
@@ -51,26 +37,26 @@ export default {
        }
      },
      async fetchNews() {
-       // Fetch news and update component data
+
        const articles = await this.getData();
        this.articles = articles;
        this.totalPages = Math.ceil(articles.length / this.rows);
      },
      nextPage() {
-       // Go to the next page
+       
        if (this.currentPage < this.totalPages) {
          this.currentPage++;
        }
      },
      prevPage() {
-       // Go to the previous page
+       
        if (this.currentPage > 1) {
          this.currentPage--;
        }
      },
    },
    mounted() {
-     // Fetch news data when the component is mounted
+    
      this.fetchNews();
    }, 
 }

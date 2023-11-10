@@ -11,7 +11,7 @@
             >
 
               <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage">
-              <img class="img-fluid w-100 h-100" v-else src="">
+              <img class="img-fluid w-100 h-100" v-else :src="image2">
            
               <div class="overlay">
                                 <div class="mb-2">
@@ -34,7 +34,7 @@
                     >
                         <div class="position-relative overflow-hidden" style="height: 250px;">
                             <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
-                            <img class="img-fluid w-100 h-100" v-else src=" " style="object-fit: cover;">
+                            <img class="img-fluid w-100 h-100" v-else :src=" image" style="object-fit: cover;">
                            
                            
                             <div class="overlay">
@@ -56,16 +56,18 @@
 export default {
     data() {
         return {
+          image:'https://www.healthcareitnews.com/sites/hitn/files/Doctor%20at%20computer%2C%20hologram%20illustration_2.jpg',
+          image2:'https://static.independent.co.uk/2023/09/15/13/Sapiens_Header%20image_iStock-1419269294.jpg?quality=75&width=640&crop=3%3A2%2Csmart&auto=webp',
           articles: [],
-          articles2: [], // Array to store articles
-          currentPage: 1,    // Current page number
-          totalPages: 1,     // Total number of pages
-          rows: 4,          // Number of articles per page
+          articles2: [], 
+          currentPage: 1,    
+          totalPages: 1,    
+          rows: 4,          
         };
       },
       computed: {
         paginatedArticles() {
-          // Calculate the range of articles to display on the current page
+          
           const start = (this.currentPage - 1) * this.rows;
           const end = start + this.rows;
           return this.articles.slice(start, end);
@@ -130,7 +132,7 @@ export default {
           },
       },
       mounted() {
-        // Fetch news data when the component is mounted
+        
         this.fetchNews();
         this.fetchNews2();
       },
