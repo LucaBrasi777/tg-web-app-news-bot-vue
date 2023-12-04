@@ -1,6 +1,6 @@
 <template lang="">
     <br/>
-  
+  <router-view></router-view>
   <bs8/>
   <!-- <bs9/> -->
   <bs14/>
@@ -29,7 +29,7 @@
      
       <div class="container">
     <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src=" https://www.youtube.com/embed/nG0Kt1Xzk60?si=svops0gUuEGyTMn1 " allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src=" https://www.youtube.com/embed/_vWUlHcMK1E?si=NurBSLMnNKdp80fL" allowfullscreen></iframe>
     </div>
   </div>
       <bs16/>

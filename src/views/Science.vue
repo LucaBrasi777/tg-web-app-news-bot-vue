@@ -3,9 +3,10 @@
   <!-- <div class="embed-responsive embed-responsive-16by9">
   <video controls="false" class="embed-responsive-item" src="https://dsqqu7oxq6o1v.cloudfront.net/preview-24051OJfY1pq7bB.mp4" allowfullscreen></video>
 </div> -->
+<router-view></router-view>
 <bs8/>
 <bs9/>
-<bs14/>
+
 
 
 <br/>
@@ -16,15 +17,17 @@
                     <div class="row">
                   
                   
-                   <bs10/>
-                   <bs5/>
-                    <bs11/>
-                    <bs6/>
                  
+                   <bs5/>
+                  
+                    
+                 <!-- <bs6/> -->
+                 <bs10/>
+                   <bs11/>
                   </div>
                     </div>
              <div class="col-lg-4">
-                    
+             
                     <bs7/>
                 
                   </div>
@@ -32,20 +35,26 @@
         </div>
     </div>
    
+    
+    
+    
+    
     <div class="container">
     <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src=" https://www.youtube.com/embed/5EB1O86fhdI?si=igBixE9NQbdQww0O" allowfullscreen></iframe>
     </div>
   </div>
     <bs16/>
-    <bs12/>
-    <bs15/>
+    
+   
+    <!-- <bs12/>
+    <bs15/> -->
    
     
   
      
-    
-  
+    <bs14/>
+   
     </template>
     <script>
     

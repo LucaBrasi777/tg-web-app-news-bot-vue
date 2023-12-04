@@ -16,11 +16,11 @@
                                 <div class="col-md-6 d-flex flex-column bg-white h-100 px-0">
                                     <div class="mt-auto p-4">
                                         <div class="mb-2">
-                                            <a class="badge badge-success text-uppercase font-weight-semi-bold p-2 mr-2"
-                                                href="">Health</a>
+                                             <router-link to="/Health" class="badge badge-success text-uppercase font-weight-semi-bold p-2 mr-2"
+                                                href="">Health</router-link>
                                             <a class="text-body" href=""><small>  {{ formatDateTime(item.publishedAt) }}</small></a>
                                         </div>
-                                        <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" :href="item.url" target="_blank">{{item.title}}</a>
+                                        <a class=" d-block mb-3 text-secondary text-uppercase font-weight-bold" :href="item.url" target="_blank">{{item.title}}</a>
                                         <p class="m-0">{{item.content}}</p>
                                     </div>
                                     <div class="d-flex justify-content-between bg-white  mt-auto p-4">
@@ -188,7 +188,7 @@ a{
   left: 0;
   right: 0;
   bottom: 0;
-  filter: brightness(0.5); /* Adjust the brightness value to control the darkness */
+  filter: brightness(0.5); 
   z-index: 1;
 }
 
@@ -198,7 +198,7 @@ a{
 }
 
 .card .d-flex h2 {
-  color: #fff; /* Set the color for the bright h2 title */
+  color: #fff; 
 }
 h2{
   position: relative;

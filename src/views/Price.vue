@@ -1,19 +1,53 @@
 <template>
-    <div class="crypto-prices">
-        <button class="btn text-white "><router-link to='/Top'>TOP</router-link></button>
+    <div class="crypto-prices mt-4">
+      <!-- <v-btn color="primary">TopCrypto </v-btn> -->
+        <button  @click="compose({})" class="btn text-white ">TOP</button>
       <div v-for="crypto in cryptos" :key="crypto.name" class="crypto-box">
         <h6 class="fw-bold">{{ crypto.name }}</h6>
         <p class="fw-bold">Price: ${{ crypto.price ? crypto.price.toFixed(2) : 'Loading' }}</p>
       </div>
     </div>
+    <v-dialog
+    class="dialog"
+            v-model="dialogCompose"
+            width="500px">
+
+
+
+
+
+
+            
+            <v-card>
+                <v-card-title class=" black1" >
+                 
+                  <!-- <img class="brand" style="width:120px" src="https://play-lh.googleusercontent.com/p2McSemKnQBO2wXgsjj8GNWjLHyDSdgSkK1YLx07Hzn9xIycsaUD_v9wmftK22FryQ=w600-h300-pc0xffffff-pd" /> -->
+           
+                </v-card-title>
+                <v-card-text class="pa-5">
+                  <div class="modal-body">
+       <top/>
+      </div>
+     </v-card-text>
+                <v-card-actions class="pa-5">
+                    <v-btn class="ml-auto" @click="saveDraft()" outlined color="red">Cancel</v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
+
   </template>
   
   <script>
   import axios from "axios";
-  
+  import top from '@/views/Top.vue'
   export default {
+    components:{top},
     data() {
       return {
+        dialogCompose: false,
+        activeMessage: {},
+        composeMessage: {},
+        valid: true,
         cryptos: [
           { name: "Bitcoin", symbol: "bitcoin" },
           { name: "Ethereum", symbol: "ethereum" },
@@ -27,6 +61,12 @@
       };
     },
     methods: {
+      compose() {
+        this.dialogCompose = true
+    },
+    saveDraft() {
+        this.dialogCompose = false
+    },
       async fetchCryptoPrices() {
         for (const crypto of this.cryptos) {
           try {
@@ -51,6 +91,7 @@
   </script>
   
   <style scoped>
+  
   .crypto-prices {
     display: flex;
     justify-content: space-around;

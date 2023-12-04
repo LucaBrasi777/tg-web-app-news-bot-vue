@@ -1,13 +1,8 @@
 
     <template lang="">
-  
-    
-           
-
-            
-            
-  
-      <div class="col-lg-12 mt-12 px-0 " id="home">
+   <router-view/>
+   
+     <div class="col-lg-12 mt-12 px-0 " id="home">
                <div class="row mx-0">
                    
                    <div class="col-md-3 px-0"
@@ -16,7 +11,7 @@
                    
                    >
                        <div  class="position-relative overflow-hidden" style="height: 250px;">
-                        <router-link :to="item.route">   
+                        <router-link  :to="item.route">   
                  <img  class="img-fluid w-100 h-100"  :src="item.img" style="object-fit: cover;">
             
                         </router-link>
@@ -26,9 +21,9 @@
                </div>
            </div>
       
-      
-      <router-view/>
-       
+     
+     
+      <div id="target"></div>
 
  </template>
  <script>
@@ -37,10 +32,10 @@
        return {
         
        
-         articles2: [], // Array to store articles
-         currentPage: 1,    // Current page number
-         totalPages: 1,     // Total number of pages
-         rows: 4,          // Number of articles per page
+         articles2: [], 
+         currentPage: 1,    
+         totalPages: 1,     
+         rows: 4,         
        };
      },
      computed: {
@@ -53,13 +48,14 @@
           },
           {
             img:'https://upload.wikimedia.org/wikipedia/uk/5/58/Business_logo.jpg',
-            route:'Business'
+            route:'/Business'
             
           },
           {
-            img:'https://st2.depositphotos.com/1092019/5248/i/450/depositphotos_52486621-stock-photo-tech-news-on-blue-puzzle.jpg',
-            route:'/Tech'
+            img:'https://deadline.com/wp-content/uploads/2019/08/e-news-logo-featured.jpg?w=681&h=383&crop=1',
+            route:'/Entertainment'
           },
+          
           {
             img:'https://www.river1467.com.au/wp-content/uploads/sites/29/2022/12/news_features_sports-news-min.jpg',
             route:'/Sport'
@@ -73,12 +69,13 @@
             route:'/Science'
           },
           {
-            img:'https://deadline.com/wp-content/uploads/2019/08/e-news-logo-featured.jpg?w=681&h=383&crop=1',
-            route:'/Entertainment'
+            img:'https://st2.depositphotos.com/1092019/5248/i/450/depositphotos_52486621-stock-photo-tech-news-on-blue-puzzle.jpg',
+            route:'/Tech'
           },
+         
           {
             img:'https://assets-global.website-files.com/5ddfe807a73baddd985c1e6f/604fa038d8d5c63d1c304640_BOTS_Crypto_News_Website-Header.jpg',
-            route:'/Crypto'
+            route:'/Business/Crypto'
           },
           
          ]},
@@ -90,6 +87,14 @@
        },
      },
      methods: {
+//       closedHome() {
+//  setTimeout(() => {
+//     const closeHome = document.getElementById('home');
+//     if (closeHome) {
+//       closeHome.style.display = "none";
+//     }
+//   }, 0);
+// },
          formatDateTime(dateTime) {
          const options = {
            year: 'numeric',
@@ -101,12 +106,23 @@
          }
          return new Date(dateTime).toLocaleString(undefined, options); },
          
+         scrollToAnchor() {
+      // Yakor' dolzhen byt' nazvaniem, k kotoromu vy hotite opustit'sya
+      const anchor = document.getElementById("target");
+      if (anchor) {
+        anchor.scrollIntoView({ behavior: "smooth" });
+      }
+    },
          
-         
-        
- 
+},
+mounted(){
+  this.scrollToAnchor();
+}
+  }
+
     
- }}
+         
+ 
  </script>
  <style lang="scss" scoped>
    .page-numbers{

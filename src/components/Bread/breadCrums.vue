@@ -1,5 +1,6 @@
 <template>
-    <nav class="breadcrumbs">
+  
+    <nav class="breadcrumbs mt-12">
       <router-link v-for="(route, index) in matched" :to="route" :key="route.name">
         {{ route.meta.title }}
         <span v-if="index < matched.length - 1"> / </span>

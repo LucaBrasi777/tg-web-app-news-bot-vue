@@ -3,7 +3,7 @@
        
 
   <main class="container mt-8">
-    <h2>CoinDesk&CoinTelegraph</h2>
+    <h4>CoinDesk&CoinTelegraph</h4>
       
     <div class="row row-cols-1 row-cols-md-4 g-4">
    

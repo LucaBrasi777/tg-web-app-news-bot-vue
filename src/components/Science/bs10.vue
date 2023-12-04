@@ -1,89 +1,32 @@
 <template lang="">
     <div class="mb-3">
-                        <!-- <div class="section-title mb-0">
-                           <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
+                        <div class="section-title mb-0 bg-dark">
+                          <router-link to="Science/Cosmos"> <h4 class="m-0 text-uppercase font-weight-bold">COSMOS</h4></router-link>
                        </div>
                        <div class="bg-white border border-top-0 p-3 ">
-                           <a href="" class="d-block w-100 text-white text-decoration-none mb-3 rounded" style="background: #39569E;">
-                              
-                               <span class="font-weight-bold">Cosmos</span>
-                           </a>
-                           <a href="" class="d-block w-100 text-white text-decoration-none mb-3 rounded" style="background: #52AAF4;">
-                             
-                               <span class="font-weight-bold">Blog</span>
-                           </a>
-                           <a href="" class="d-block w-100 text-white text-decoration-none mb-3 rounded" style="background: #0185AE;">
-                             
-                            
-                               <span class="font-weight-bold">Articles</span>
-                           </a>
                           
-                       </div>  -->
+                        <div class="bg-white text-center   p-3">
+                          
+                          <router-link to="/Cosmos">  <img class="img-fluid " src="https://storage.googleapis.com/pod_public/1300/139326.jpg" style="object-fit: cover;"></router-link>
+                               
+                               
+                    </div>
+                       </div> 
                    </div>
                  
 </template>
 <script>
 export default {
-   data() {
-      return {
-        articles: [],       
-        currentPage: 1,   
-        totalPages: 1,     
-        rows: 12,         
-      };
-    },
-    computed: {
-      paginatedArticles() {
-        
-        const start = (this.currentPage - 1) * this.rows;
-        const end = start + this.rows;
-        return this.articles.slice(start, end);
-      },
-    },
-    methods: {
-      async getData() {
-        // Fetch articles from the News API
-        //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
-        //const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
-        const pageSize = 12;
-        
-        try {
-          const response = await fetch(
-            `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=6&CategoryId=9&Language=14&Page=1&PageSize=${pageSize}`
-          );
-          const data = await response.json();
-          return data.items;
-        } catch (error) {
-          console.error('Error fetching news:', error);
-          return [];
-        }
-      },
-      async fetchNews() {
-       
-        const articles = await this.getData();
-        this.articles = articles;
-        this.totalPages = Math.ceil(articles.length / this.rows);
-      },
-      nextPage() {
-        
-        if (this.currentPage < this.totalPages) {
-          this.currentPage++;
-        }
-      },
-      prevPage() {
-        
-        if (this.currentPage > 1) {
-          this.currentPage--;
-        }
-      },
-    },
-    mounted() {
-      
-      this.fetchNews();
-    }, 
+  
 }
 </script>
 <style lang="scss" scoped>
+h4{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color:rgb(253, 46, 5);
+font-size: 40px;
+text-shadow: 2px 2px 2px white;
+}
 span{
  padding: 15px;
  font-size: 20px;

@@ -13,8 +13,7 @@
          
             <div class="overlay">
                               <div class="mb-2">
-                                  <a class="badge badge-danger text-white text-uppercase font-weight-semi-bold p-2 mr-2"
-                                      href="">Sport</a>
+                                <router-link to="/Sport" class="badge badge-danger text-white text-uppercase font-weight-semi-bold p-2 mr-2 ">Sport</router-link>
                                   <a class="text-white" href=""><small></small></a>
                               </div>
                               <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" :href="item.url" target="_blank">{{item.title}}</a>

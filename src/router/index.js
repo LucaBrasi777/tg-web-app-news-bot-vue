@@ -10,8 +10,18 @@ import Science from '@/views/Science.vue';
 import Health from '@/views/Health.vue'
 import About from '@/views/About.vue'
 import Top from '@/views/Top.vue'
+import Tags from '@/views/Tags.vue'
 import Stocks from '@/views/Stocks.vue'
 import General from '@/views/General.vue'
+import Cosmos from '@/views/Cosmos.vue'
+import Login from '@/views/Login.vue'
+import en from '@/views/articles/articlesEnter.vue'
+import hl from '@/views/articles/articlesHealth.vue'
+import sp from '@/views/articles/articlesSport.vue'
+import  t from '@/views/articles/articlesTech.vue'
+import bus from '@/views/articles/articlesBus.vue'
+import sc from '@/views/articles/articlesScience.vue'
+
 const routes = [
   {
     path: "/",
@@ -20,46 +30,65 @@ const routes = [
     meta: { title: "HOME" },
     children: [
       {
-        path: 'General',
+        path: '/Science',
+        component: Science,
+        meta: { title: "SCIENCE" },
+        children:[
+          {
+            path: "Cosmos",
+            component: Cosmos,
+            name: "Cosmos",
+            meta: { title: "COSMOS" },
+          },
+        ]
+      },
+      {
+        path: '/General',
         component: General,
         meta: { title: "GENERAL" },
       },
       {
-        path: 'Business',
+        path: '/Business',
         component: Business,
         meta: { title: "BUSINESS" },
         children:[
+          {
+            name:"Crypto",
+            path: 'Crypto',
+            component: Crypto,
+            meta: { title: "CRYPTO" },
+            children:[
+              {
+                name:"Top",
+                path: 'Top',
+                component: Top,
+                meta: { title: "TOP" },
+              },
+              
+            ]
+          },
           
         ]
       },
+      
       {
-        name:"Crypto",
-        path: 'Crypto',
-        component: Crypto,
-        meta: { title: "CRYPTO" },
-      },
-      {
-        path: 'Sport',
+        path: '/Sport',
         component: Sport,
         meta: { title: "SPORT" },
       },
       {
-        path: 'Tech',
+        path: '/Tech',
         component: Tech,
         meta: { title: "TECHNOLOGY" },
       },
       {
-        path: 'Health',
+        path: '/Health',
         component: Health,
         meta: { title: "HEALTH" },
       },
+      
       {
-        path: 'Science',
-        component: Science,
-        meta: { title: "SCINCE" },
-      },
-      {
-        path: 'Entertainment',
+        path: '/Entertainment',
         component: Entertainment,
         meta: { title: "ENTERTAINMENT" },
       },
@@ -78,15 +107,62 @@ const routes = [
   // },
   
   {
-    path: "/Top",
-    component: Top,
-    name: "Top",
+    path: "/Tags",
+    component: Tags,
+    name: "Tags",
+    meta: { title: "ARTICLES" },
+    children:[
+      {
+        path: "t",
+        component: t,
+        name: "t",
+        meta: { title: "TECHNOLOGY" },
+      },
+      {
+        path: "sp",
+        component: sp,
+        name: "sp",
+        meta: { title: "SPORT" },
+      },
+      {
+        path: "en",
+        component: en,
+        name: "en",
+        meta: { title: "ENTERTAINMENT" },
+      },
+      {
+        path: "hl",
+        component: hl,
+        name: "hl",
+        meta: { title: "HEALTH" },
+      },
+      {
+        path: "sc",
+        component: sc,
+        name: "sc",
+        meta: { title: "SCIENCE" },
+      },
+      {
+        path: "bus",
+        component: bus,
+        name: "bus",
+        meta: { title: "BUSINESS" },
+      },
+
+    ]
   },
   {
     path: "/Stocks",
     component: Stocks,
     name: "Stocks",
   },
+  {
+    path: "/Signin",
+    component: Login,
+    name: "Login",
+  },
+  
+  
 ];
 
 const router = createRouter({

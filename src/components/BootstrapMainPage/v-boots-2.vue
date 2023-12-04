@@ -10,11 +10,11 @@
                                
                                 <div class="bg-white  p-4">
                                     <div class="">
-                                        <a class="badge badge-info text-uppercase font-weight-semi-bold p-2 mr-2 text-white"
-                                            href="">Entertainment</a>
+                                         <router-link to="/Entertainment" class="badge badge-info text-uppercase font-weight-semi-bold p-2 mr-2 text-white"
+                                            href="">Entertainment</router-link>
                                         <a class="text-body" href=""><small> {{ formatDateTime(item.publishedAt) }}</small></a>
                                     </div>
-                                    <a class="h4 d-block  text-secondary text-uppercase font-weight-bold" :href="item.url" target="_blank">{{item.title}}</a>
+                                    <a class=" d-block  text-secondary text-uppercase font-weight-bold" :href="item.url" target="_blank">{{item.title}}</a>
                                     <!-- <p class="m-0 text-secondary">{{item.content}}</p> -->
                                     <!-- <a href="#" class="text-secondary">author:{{item.author}}</a> -->
                                     <!-- <a href="#" class="">author:{{item.author}}</a> -->

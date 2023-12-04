@@ -5,8 +5,8 @@
   
     >
                         <div class="section-title mb-0">
-                            <a style="font-size:20px" class="m-0 text-uppercase font-weight-bold text-black"  :href="item.url" target="_blank">{{item.title}}</a>
-                       <img :src="item.source_info.img" style="width:20px">
+                            <a style="font-size:16px" class="m-0 text-uppercase font-weight-bold text-black text"  :href="item.url" target="_blank">{{item.title}}</a>
+                       <img :src="item.source_info.img" style="width:18px">
                           </div>
                         <div class="bg-white text-center   p-3"> 
                          <div class="card-body">
@@ -148,4 +148,9 @@ a{
     text-decoration: underline;
 
   }  
+  .text{
+    @media screen and(max-width:300px){
+      font-size:15px
+    }
+  }
 </style>

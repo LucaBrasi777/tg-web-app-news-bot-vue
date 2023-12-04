@@ -1,11 +1,11 @@
 <template lang="">
   
     <div class="mb-3"
-    v-for="(item, index) in articles.slice(77)" :key="index"
+    v-for="(item, index) in articles.slice(78)" :key="index"
   
     >
                         <div class="section-title mb-0">
-                            <a style="font-size:20px" class="m-0 text-uppercase font-weight-bold text-black"  :href="item.url" target="_blank">{{item.title}}</a>
+                            <a style="font-size:15px" class="m-0 text-uppercase font-weight-bold text-black"  :href="item.url" target="_blank">{{item.title}}</a>
                         </div>
                         <div class="bg-white text-center   p-3"> 
                           

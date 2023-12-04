@@ -16,11 +16,11 @@
                             <div class="col-md-6 d-flex flex-column bg-white h-100 px-0">
                                 <div class="mt-auto p-4">
                                     <div class="mb-2">
-                                        <a class="badge badge text-uppercase font-weight-semi-bold p-2 mr-2 text-white"
-                                            href="">Science</a>
-                                        <a class="text-body" href=""><small> {{ formatDateTime(item.publishedAt) }}</small></a>
+                                         <router-link to="/Science" class="badge badge text-uppercase font-weight-semi-bold p-2 mr-2 text-white"
+                                            href="">Science</router-link>
+                                        <a class="text-body"><small> {{ formatDateTime(item.publishedAt) }}</small></a>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" :href="item.url" target="_blank">{{item.title}}</a>
+                                    <a class=" d-block mb-3 text-secondary text-uppercase font-weight-bold" :href="item.url" target="_blank">{{item.title}}</a>
                                     <p class="m-0">{{item.content}}</p>
                                 </div>
                                 <div class="d-flex justify-content-between bg-white  mt-auto p-4">

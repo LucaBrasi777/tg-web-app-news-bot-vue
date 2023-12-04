@@ -2,11 +2,16 @@
   <div class="container-fluid bg-black  px-sm-3 px-md-5 ">
         <div class="row py-4">
             <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Get In Touch</h5>
+            
+                <div class="">
+       <p>Hub News are your trusted source for up-to-the-minute news covering the world of cryptocurrencies and the dynamic realm of business. Our mission is to provide our readers with the freshest and most reliable information needed to make informed decisions in the fields of investment, finance, and technology.</p>
+      
+      </div>
+      <h5 class="mb-4 text-white text-uppercase font-weight-bold">Get In Touch</h5>
                 <p class="font-weight-medium text-white "><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
                 <p class="font-weight-medium text-white"><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                <p class="font-weight-medium text-white"><i class="fa fa-envelope mr-2"></i>BIZnews@gmail.com</p>
-                <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">Follow Us</h6>
+                <p class="font-weight-medium text-white"><i class="fa fa-envelope mr-2"></i>newshub@gmail.com</p>
+                <h6 class="mt-12 text-white text-uppercase font-weight-bold">Follow Us</h6>
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -16,86 +21,114 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="mb-4 text-white text-uppercase font-weight-bold">Contact</h5>
-                <div class="mb-3">
-                    <div class="mb-2">
-                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
+              <div class="">
+       
+      <p>Hub News monitor the latest developments in the cryptocurrency world, analyze the market, and provide reviews of leading digital assets. Whether you're an experienced trader or a newcomer to the crypto space, our content will help you stay informed about crucial events.As well as many articles about science and sports</p>
+      
+      </div>
+                <h5 class="mb-4 text-white text-uppercase font-weight-bold">We are on the map</h5>
+                <!-- <div class="mb-3"> -->
+                     <!-- <div class="mb-2">
+                       <router-link to="/Business"  @click="closedHome" class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</router-link>
                         
                     </div>
                     <div class="mb-2">
-                        <a class="badge badge-success text-white text-uppercase font-weight-semi-bold p-1 mr-2" href="">Health</a>
+                      <router-link to="/Health"  @click="closedHome" class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Health</router-link>
                         
                     </div>
                     <div class="mb-2">
-                        <a class="badge text-white badge-danger text-uppercase font-weight-semi-bold p-1 mr-2" href="">Sport</a>
+                      <router-link to="/Sport"  @click="closedHome" class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Sport</router-link>
                         
                     </div>
                     <div class="mb-2">
-                        <a class="badge badge-secondary text-uppercase text-white font-weight-semi-bold p-1 mr-2" href="">Technology</a>
+                      <router-link to="/Tech"  @click="closedHome" class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Technology</router-link>
                         
                     </div>
                     <div class="mb-2">
-                        <a  class="badge  text-white text-uppercase font-weight-semi-bold p-1 mr-2" href="" style="background-color:blue">Science</a>
+                      <router-link to="/Science"  @click="closedHome" class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Science</router-link>
                         
                     </div>
 
                     <div class="mb-2">
-                        <a class="badge badge-info text-white text-uppercase font-weight-semi-bold p-1 mr-2" href="">Entertainment</a>
+                      <router-link to="/Entertainment"  @click="closedHome" class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Entertainment</router-link>
                         
                     </div>
                     <div class="mb-2">
-                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Crypto</a>
+                      <router-link to="/Business/Crypto"  @click="closedBusiness"  class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Crypto</router-link>
                         
-                    </div>
-                </div> 
+                    </div> -->
+                <!-- </div>  -->
                
                 <div class="row w-100">
-                  <!-- <div class="col-lg-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35818.719732048536!2d-4.25169!3d55.868392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1sen!2sus!4v1448625188752" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div> -->
+                  <div class="col-lg-12 text-center">
+                    <iframe
+  class="map"                  
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.675957638746!2d-74.00597278459788!3d40.71277558243257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDEwJzQyLjkiTiA3NMKwMTInMDcuNiJX!5e0!3m2!1sen!2sus!4v1448625188752"
+  width="300"
+  height="230"
+  frameborder="0"
+  style="border:0"
+  allowfullscreen
+></iframe>
+
+</div>
 
 
-  <!-- <div class="col-lg-6 my-4 d-flex align-items-center">
-    <div>
-      <h6>This map is embedded in a 6 column layout</h6>
-      <p>Try to resize your browser window - you will see that it starts to take up 12 columns on
-        screens smaller than 992px.</p>
-      <p>This useful feature helps to make your embedded map responsive (<strong>mobile
-          friendly</strong>). You can customize responsive behavior with the use of <a
-          href="https://mdbootstrap.com/docs/standard/layout/breakpoints/">breakpoints</a>.</p>
-      <p>This text looks so nice because it's <strong>vertically centered</strong> you can achieve
-        this effect using the <a
-          href="https://mdbootstrap.com/docs/standard/layout/vertical-alignment/">vertical
-          alignment</a> layout option.</p>
-    </div>
-  </div> -->
+ 
 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
               <h5 class="mb-4 text-white text-uppercase font-weight-bold">Popular </h5>
                 <div class="m-n1">
-                    <a href="" class="btn btn-sm btn-secondary m-1">Sport</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Crypto</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Technology</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Health</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Entertainment</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Science</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Bitcoin</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Cinema</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">UFC</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Travel</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Lifestyle</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Festivals</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Forex</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Corporate</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">NFT</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Stocks</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">TOP</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Articles</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
-                    <a href="" class="btn btn-sm btn-secondary m-1">Foods</a>
-                </div>
+                    <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Sport</router-link>
+                     <router-link to="/Business" class="btn btn-sm btn-secondary m-1">Business</router-link>
+                     <router-link to="/Business/Crypto" class="btn btn-sm btn-secondary m-1">Crypto</router-link>
+                     <router-link to="/Tech" class="btn btn-sm btn-secondary m-1">Technology</router-link>
+                     <router-link to="/Science/Cosmos" class="btn btn-sm btn-secondary m-1">Cosmos</router-link>
+                     <router-link to="/Entertainment" class="btn btn-sm btn-secondary m-1">Entertainment</router-link>
+                     <router-link to="/Science" class="btn btn-sm btn-secondary m-1">Science</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Bitcoin</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Cinema</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">UFC</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Travel</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Lifestyle</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Festivals</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Forex</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Corporate</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">NFT</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Stocks</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">TOP</router-link>
+                     <router-link to="/Tags" class="btn btn-sm btn-secondary m-1">Articles</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Business</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Foods</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Science</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Bitcoin</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Cinema</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">UFC</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Travel</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Lifestyle</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Festivals</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Forex</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Corporate</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">NFT</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Stocks</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">TOP</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Articles</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Business</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Foods</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Bitcoin</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Cinema</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">UFC</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Travel</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Festivals</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Forex</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Corporate</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">NFT</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">Stocks</router-link>
+                     <router-link to="/Sport" class="btn btn-sm btn-secondary m-1">TOP</router-link>
+                   
+                   
+                  </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5"> 
                 <h5 class="mb-4 text-white text-uppercase font-weight-bold">Last news</h5>
@@ -107,26 +140,12 @@
                        
                     <a :href="item.url">
                       <img class="w-100" v-if="item.urlToImage" :src="item.urlToImage" alt="">
-                      <img class="w-100" v-else src="https://trak.in/wp-content/uploads/2019/04/Untitled-design-1-5-1-1-1-1-2-1-3.jpg" alt="">
+                      <img class="w-100" v-else :src="image" alt="">
                     
                     </a>
                     
                   </div>
-                    <!-- <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="/src/img/news-110x110-2.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="/src/img/news-110x110-3.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="/src/img/news-110x110-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="/src/img/news-110x110-5.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <a href=""><img class="w-100" src="/src/img/news-110x110-1.jpg" alt=""></a>
-                    </div> -->
+                    
                 </div>
             </div>
         </div>
@@ -134,11 +153,11 @@
     <a href="#" class="btn btn-dark btn-square back-to-top"><i style="color:white" class="fa fa-arrow-up"></i></a>
 
     <div class="container-fluid py-4 px-sm-3 px-md-5 text-white" style="background: #111111;">
-        <p class="m-0 text-center text-white">&copy; <a class=" text-white" href="#">BIZnews</a>. All Rights Reserved. 
+        <p class="m-0 text-center text-white">&copy; <a class=" text-white" href="#">NewsHub</a>. All Rights Reserved. 
 		
-		<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-		Design by <a class=" text-white" href="https://htmlcodex.com">HTML Codex</a><br>
-        Distributed by <a class=" text-white" href="https://themewagon.com">ThemeWagon</a>
+		
+	<a class=" text-white" href="https://htmlcodex.com">2023</a><br>
+         <a class=" text-white" href="https://themewagon.com"></a>
     </p>
     </div>
 <br/><br/>
@@ -149,31 +168,43 @@ export default {
 
   data() {
        return {
+        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS0qiZNhj7gGZ88wx9rCMcl5juiagmuZg6iytAHOouX55W7k3HKa9n7z2PR5eT8jhitXw&usqp=CAU',
         currentYear: new Date().getFullYear(),
-         articles: [],       // Array to store articles
-         currentPage: 1,    // Current page number
-         totalPages: 1,     // Total number of pages
-         rows: 11,          // Number of articles per page
+         articles: [],       
+         currentPage: 1,    
+         totalPages: 1,    
+         rows: 11,          
        };
      },
      computed: {
        paginatedArticles() {
-         // Calculate the range of articles to display on the current page
+        
          const start = (this.currentPage - 1) * this.rows;
          const end = start + this.rows;
          return this.articles.slice(start, end);
        },
      },
      methods: {
+      closedBusiness() {
+  console.log("Closing Business");
+  setTimeout(() => {
+    const closeBusiness = document.getElementById('business');
+    if (closeBusiness) {
+      closeBusiness.style.display = "none";
+    }
+  }, 0);
+},
+      closedHome(){
+    const close = (document.getElementById('home').style.display="none")
+    },
        async getData() {
-         // Fetch articles from the News API
-        // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
-         //const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
-         const pageSize = 12;
+        
+        
+         const pageSize = 21;
          
          try {
            const response = await fetch(
-            `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=6&CategoryId=10&Language=14&Page=5&PageSize=${pageSize}`
+            `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=8&Language=14&Page=1&PageSize=${pageSize}`
            );
            const data = await response.json();
            return data.items;
@@ -183,26 +214,26 @@ export default {
          }
        },
        async fetchNews() {
-         // Fetch news and update component data
+         
          const articles = await this.getData();
          this.articles = articles;
          this.totalPages = Math.ceil(articles.length / this.rows);
        },
        nextPage() {
-         // Go to the next page
+         
          if (this.currentPage < this.totalPages) {
            this.currentPage++;
          }
        },
        prevPage() {
-         // Go to the previous page
+         
          if (this.currentPage > 1) {
            this.currentPage--;
          }
        },
      },
      mounted() {
-       // Fetch news data when the component is mounted
+       
        this.fetchNews();
      }, 
 
@@ -213,6 +244,14 @@ export default {
 </script>
 
 <style scoped lang="scss"> 
+.map{
+  @media screen and (max-width:300px){
+    width: 250px;
+  }
+  @media screen and (max-width:275px){
+    width: 200px;
+  }
+}
 li{
   font-weight: bold;
 }

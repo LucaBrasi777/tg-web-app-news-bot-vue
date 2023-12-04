@@ -5,14 +5,14 @@
     <div class="p-2">
       <button @click="startWatchingPosition" class="text-white">location</button>
       <div v-if="location">
-        <p>Lt: {{ location.latitude }}</p>
-        <p>Lg: {{ location.longitude }}</p>
+        <p style="font-size:10px">Lt: {{ location.latitude }}</p>
+        <p style="font-size:10px">Lg: {{ location.longitude }}</p>
       </div>
       <div v-if="error">
-        <p>{{ error }}</p>
+        <p >{{ error }}</p>
       </div>
       <div v-if="nearestCity">
-        <p>City: {{ nearestCity }}</p>
+        <p style="font-size:10px">City: {{ nearestCity }}</p>
       </div>
     </div>
   </template>

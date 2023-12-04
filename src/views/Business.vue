@@ -1,4 +1,7 @@
 <template lang="">
+   <router-view></router-view>
+  <div id="business">
+
      <div class="mt-12"></div>
       <bs8/>
       <bs9/> 
@@ -23,7 +26,7 @@
                    <div class="col-lg-4">
                           
                           <bs7/>
-                      
+                          <bs17/>
                         </div>
                   </div>
               </div>
@@ -38,10 +41,10 @@
           <bs12/>
           <bs15/>
          
-          
+</div>
         
            
-          
+         
         
           </template>
           <script>
@@ -57,7 +60,7 @@
           import bs14 from '../components//BusinessMainPage/bs14.vue'
           import bs12 from '../components/BusinessMainPage/bs12.vue'
           import bs15 from '../components/BusinessMainPage/bs15.vue'
-
+          import bs17 from '../components/BusinessMainPage/bs-17.vue'
           export default {
             components:{
           bs5,bs6,
@@ -69,7 +72,7 @@
           bs14,
           bs12,
           bs16,
-         
+         bs17,
           bs15,
          
             },
@@ -161,5 +164,8 @@
                   } 
                   .card{
                     box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+                  }
+                  #business{
+                    // display: none;
                   }
           </style>

@@ -15,9 +15,9 @@
            
               <div class="overlay">
                                 <div class="mb-2">
-                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2 text-white"
-                                        href="">Business</a>
-                                    <a class="text-white" href=""><small></small></a>
+                                    <router-link to="/Business" class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2 text-white"
+                                        >Business</router-link>
+                                    <small></small>
                                 </div>
                                 <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" :href="item.url" target="_blank">{{item.title}}</a>
                             </div>
@@ -39,9 +39,9 @@
                            
                             <div class="overlay">
                                 <div class="mb-2">
-                                    <a class="badge badge-success text-uppercase font-weight-semi-bold p-2 mr-2 text-white"
-                                        href="">Health</a>
-                                    <a class="text-white" href=""><small></small></a>
+                                    <router-link to="/Health" class="badge badge-success text-uppercase font-weight-semi-bold p-2 mr-2 text-white"
+                                        >Health</router-link>
+                                  <small></small>
                                 </div>
                                 <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" :href="item.url" target="_blank">{{item.title}}</a>
                             </div>

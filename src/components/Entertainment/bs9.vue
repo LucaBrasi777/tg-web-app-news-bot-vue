@@ -7,7 +7,7 @@
                 <div class="row mx-0">
 
                     <div class="col-md-6 px-0"
-                    v-for="(item, index) in articles.slice(41)" :key="index">
+                    v-for="(item, index) in articles.slice(5)" :key="index">
                         <div class="position-relative overflow-hidden" style="height: 250px;">
                            
                           <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
@@ -71,7 +71,7 @@
           async getData() {
             
            
-            const pageSize = 45;
+            const pageSize = 9;
       
             try {
               const response = await fetch(

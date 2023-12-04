@@ -8,9 +8,9 @@
                       <div class="row">
                      <boots2/>
                       <boots3/>
-                       <boots4/>
-                         <boots5/>
-                         <boots6/>
+                       <!-- <boots4/> -->
+                         <!-- <boots5/>
+                         <boots6/> -->
                          
                      </div>
                   </div>

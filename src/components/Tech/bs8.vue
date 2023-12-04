@@ -11,7 +11,7 @@
      
      
           <div class="col-lg-7 px-0"
-          v-for="(item,index) in articles2.slice(1)"
+          v-for="item in articles"
                   :key="item"
           >
 
@@ -37,12 +37,12 @@
               <div class="row mx-0">
                   
                   <div class="col-md-6 px-0"
-                  v-for="(item,index) in articles.slice(2)" :key="index">
+                  v-for="(item,index) in articles2.slice(2)" :key="index">
                   
                   
                       <div class="position-relative overflow-hidden" style="height: 250px;">
-                          <img class="img-fluid w-100 h-100" :src="item.urlToImage" style="object-fit: cover;">
-                        
+                          <img class="img-fluid w-100 h-100" v-if="item.urlToImage" :src="item.urlToImage" style="object-fit: cover;">
+                        <img class="img-fluid w-100 h-100" v-else :src="image" style="object-fit:cover;"/>
                         
                           <div class="overlay">
                               <div class="mb-2">
@@ -70,89 +70,64 @@
   </div>
 </template>
 <script>
+
 export default {
   data() {
-      return {
-        image:'https://www.yondu.com/wp-content/uploads/2022/08/OPT-2-medium-shot-man-wearing-vr-glasses-scaled.jpg',
-        articles: [],
-        articles2: [], 
-        currentPage: 1,    
-        totalPages: 1,    
-        rows: 4,         
+    return {
+      image: 'https://importanceoftechnology.net/wp-content/uploads/2020/05/Physiofusion-1024x819-2-950x760-1.jpg',
+      articles: [],
+      articles2: [],
+      currentPage: 1,
+      totalPages: 1,
+      rows: 4,
+    };
+  },
+  methods: {
+    formatDateTime(dateTime) {
+      const options = {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
       };
+      return new Date(dateTime).toLocaleString(undefined, options);
     },
-    computed: {
-      paginatedArticles() {
-       
-        const start = (this.currentPage - 1) * this.rows;
-        const end = start + this.rows;
-        return this.articles.slice(start, end);
-      },
-    },
-    methods: {
-        formatDateTime(dateTime) {
-        const options = {
-          year: 'numeric',
-          month: '2-digit',
-          day: '2-digit',
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-        }
-        return new Date(dateTime).toLocaleString(undefined, options); },
-        
-        
-        
-        async getData() {
-          
-         
-          const pageSize = 6;
-    
-          try {
-            const response = await fetch(
-              `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=11&Language=14&WithImageOnly=true&Page=1&PageSize=${pageSize}`
-            );
-            const data = await response.json();
-            return data.items;
-          } catch (error) {
-            console.error("Error fetching news:", error);
-            return [];
-          }
-        },
-        async fetchNews() {
-          const articles = await this.getData();
-          this.articles = articles;
-          this.totalPages = Math.ceil(articles.length / this.rows);
-        },
 
-        async getData2() {
-          
-         
-          const pageSize = 2;
-    
-          try {
-            const response = await fetch(
-              `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=11&Language=14&WithImageOnly=true&Page=1&PageSize=${pageSize}`
-            );
-            const data = await response.json();
-            return data.items;
-          } catch (error) {
-            console.error("Error fetching news:", error);
-            return [];
-          }
-        },
-        async fetchNews2() {
-          const articles = await this.getData2();
-          this.articles2 = articles;
-          this.totalPages = Math.ceil(articles.length / this.rows2);
-        },
+    async getData(pageSize, category) {
+      try {
+        const response = await fetch(
+          `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=${category}&Language=14&WithImageOnly=true&Page=1&PageSize=${pageSize}`
+        );
+        const data = await response.json();
+        return data.items;
+      } catch (error) {
+        console.error("Error fetching news:", error);
+        return [];
+      }
     },
-    mounted() {
-     
-      this.fetchNews();
-      this.fetchNews2();
+
+    async fetchNews() {
+      const articles = await this.getData(1, 11); // Пример параметров: pageSize = 6, category = 11
+      this.articles = articles;
+      this.totalPages = Math.ceil(articles.length / this.rows);
     },
-}
+
+    async fetchNews2() {
+      const articles = await this.getData(6, 11); // Пример параметров: pageSize = 2, category = 11
+      this.articles2 = articles;
+      this.totalPages = Math.ceil(articles.length / this.rows);
+    },
+  },
+
+  mounted() {
+   
+    this.fetchNews();
+    this.fetchNews2();
+  },
+};
+
 </script>
 <style lang="scss" scoped>
   .page-numbers{

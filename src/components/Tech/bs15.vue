@@ -10,7 +10,7 @@
              <div class="row mx-0">
                  
                  <div class="col-md-3 px-0"
-                 v-for="(item, index) in articles2.slice(72)" :key="index"
+                 v-for="(item, index) in articles.slice(72)" :key="item.id"
                  
                  >
                      <div class="position-relative overflow-hidden" style="height: 250px;">
@@ -72,7 +72,7 @@ export default {
        async getData() {
          
         
-         const pageSize = 4;
+         const pageSize = 84;
    
          try {
            const response = await fetch(

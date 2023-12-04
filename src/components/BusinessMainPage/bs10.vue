@@ -1,8 +1,9 @@
 <template lang="">
     <div class="bg-dark">
                         <div class="section-title mb-0  bg-dark">
-                           <h4 class="m-0 text-uppercase font-weight-bold text-white">Company&Stocks</h4>
+                           <h4 class="m-0 text-uppercase font-weight-bold text-white">Stocks</h4>
                        </div>
+                      
                        <stocks/>
                        <div class="bg-dark border border-top-0 p-3 ">
                        
