@@ -1,46 +1,49 @@
 <template>
-  <v-app id="app" >
+  <v-app id="app" style="">
 
-<div class="navi">
-  <navi/>
-</div>
-<br/>
-<div  class="main-div" >
-<router-view></router-view>
-</div>
-  <cook/>    
+
+ 
+  
 <v-footer-component/>
+
  </v-app>
 </template>
 
 <script>
-import cook from './components/cookies/cook.vue'
-// import boots6 from './components/BootstrapMainPage/v-boots-6.vue'
-// import vNavNav from './pages/nav-nav.vue'
-// import vNav from './pages/nav.vue'
+
 import vFooterComponent from './components/footer/v-footer-component.vue';
-import navi from './components/nav/nav-2.vue';
-// import search from '@/views/Select-2.vue'
-// import searchGrid from '@/views/Select-2-grid.vue'
+
+
 export default {
-  components: {vFooterComponent,cook,
+  components: {vFooterComponent,
    
-    navi,
+   
    
 
   },
   data() {
     return {
       isScrolled: false,
+      showButton: false,
     };
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.checkScroll);
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
+    checkScroll() {
+      this.showButton = window.scrollY > 100; // Change 100 to the scroll position you prefer
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
     closedHome(){
     const close = document.getElementById('home').style.display="none"
     },
@@ -53,10 +56,25 @@ export default {
       }
     },
   },
+ 
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.checkScroll);
+  },
 }
 </script>
 <style lang="scss" scoped>
-
+.back{
+  position: fixed;
+  top:270px;
+  z-index: 1;
+}
+.top{
+  width: 10px;
+  left: 0;
+  position: fixed;
+  top:120px;
+  z-index:10;
+}
 .navi{
   position: fixed;
   right: 0;
@@ -113,10 +131,15 @@ li:hover{
 // }
 
 
-
 .main-div{
-  @media screen and(max-width: 320px){
-    margin-top: 30px;
+  margin-top: 15px;
+}
+.main-div{
+  @media screen and (max-width: 1199px){
+    margin-top: px;
+  }
+  @media screen and (max-width: 320px){
+    margin-top: 10px;
   }
 }
 </style>
